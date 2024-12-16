@@ -16,6 +16,7 @@ module.exports = {
         padding: {
           DEFAULT: "2rem",
         },
+        background: "#FAF4F1",
       },
       colors: {
         background: "hsl(var(--background))",

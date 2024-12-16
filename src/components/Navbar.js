@@ -1,7 +1,218 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(null); // Track which menu is active
+
+  // Toggle mobile menu visibility
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Handle mouse enter and leave for dropdowns (for desktop)
+  const handleMouseEnter = (index) => setActiveMenu(index);
+  const handleMouseLeave = () => setActiveMenu(null);
+
+  // Dynamic button classes for Get Started button
+  const buttonClass =
+    "border-2 border-black text-black hover:bg-black hover:text-white";
+
+  // Desktop and mobile menu links data
+  const menuItems = [
+    { href: "/menu-1", label: "Menu 1" },
+    { href: "/menu-2", label: "Menu 2" },
+    { href: "/menu-3", label: "Menu 3" },
+    { href: "/menu-4", label: "Menu 4" },
+    { href: "/menu-5", label: "Menu 5" },
+  ];
+
   return (
-    <>
-      <h3> Navbar </h3>
-    </>
+    <nav className="bg-white text-foreground px-4 py-3 shadow-md transition-all duration-300 sticky top-0 z-50">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <div className="text-xl font-semibold">
+          <Link href="/" className="text-primary">
+            MyLogo
+          </Link>
+        </div>
+
+        {/* Dropdown Menus (Desktop and Mobile/Tablets view) */}
+        <div className="hidden md:flex space-x-6">
+          {" "}
+          {/* Hidden on mobile/tablet and visible on desktop */}
+          {menuItems.map((menu, index) => (
+            <div
+              key={menu.label}
+              className="relative"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                className="flex items-center text-primary font-semibold py-2 px-4 rounded-md hover:bg-primary/10 focus:outline-none"
+                aria-haspopup="true"
+                aria-expanded={activeMenu === index ? "true" : "false"}
+                onClick={() => window.innerWidth <= 768 && setActiveMenu(index)} // Toggle on mobile click
+              >
+                {menu.label}
+                {/* Down Arrow Icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out ${
+                    activeMenu === index ? "rotate-180" : "rotate-0"
+                  }`}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              {/* Dropdown Content */}
+              <div
+                className={`absolute left-0 mt-2 w-48 bg-white dark:bg-gray-700 text-primary dark:text-white rounded-lg shadow-lg transition-all duration-200 ease-in-out ${
+                  activeMenu === index
+                    ? "opacity-100 visible"
+                    : "opacity-0 invisible"
+                }`}
+                aria-hidden={activeMenu !== index}
+              >
+                <Link
+                  href={`/${menu.label.toLowerCase().replace(" ", "-")}`}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
+                >
+                  Link 1
+                </Link>
+                <Link
+                  href={`/${menu.label
+                    .toLowerCase()
+                    .replace(" ", "-")}-details`}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
+                >
+                  Link 2
+                </Link>
+                <Link
+                  href={`/${menu.label.toLowerCase().replace(" ", "-")}-info`}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
+                >
+                  Link 3
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Right Button (Desktop view) */}
+        <div className="hidden md:flex space-x-4">
+          <button
+            className={`px-6 py-2 rounded-md border-2 focus:outline-none ${buttonClass}`}
+          >
+            Get Started
+          </button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className="md:hidden text-primary"
+          aria-expanded={isMenuOpen ? "true" : "false"}
+        >
+          {isMenuOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          )}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
+        <div className="flex flex-col items-center space-y-4 py-4">
+          {menuItems.map((menu, index) => (
+            <div key={menu.label} className="relative">
+              <button
+                className="text-lg text-primary dark:text-white py-2 px-4"
+                onClick={() =>
+                  setActiveMenu(activeMenu === index ? null : index)
+                }
+              >
+                {menu.label}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out ${
+                    activeMenu === index ? "rotate-180" : "rotate-0"
+                  }`}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </button>
+
+              {/* Mobile dropdown (click to toggle) */}
+              <div
+                className={`${
+                  activeMenu === index ? "block" : "hidden"
+                } absolute left-0 mt-2 w-48 bg-white dark:bg-gray-700 text-primary dark:text-white rounded-lg shadow-lg transition-all duration-200 ease-in-out`}
+              >
+                <Link
+                  href={`/${menu.label.toLowerCase().replace(" ", "-")}`}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
+                >
+                  Link 1
+                </Link>
+                <Link
+                  href={`/${menu.label
+                    .toLowerCase()
+                    .replace(" ", "-")}-details`}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
+                >
+                  Link 2
+                </Link>
+                <Link
+                  href={`/${menu.label.toLowerCase().replace(" ", "-")}-info`}
+                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
+                >
+                  Link 3
+                </Link>
+              </div>
+            </div>
+          ))}
+          <button className="border-2 border-black text-black hover:bg-black hover:text-white rounded-md px-6 py-2 focus:outline-none">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </nav>
   );
 }
