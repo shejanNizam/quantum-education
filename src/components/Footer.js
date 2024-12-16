@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-cover bg-center relative bg-[#FAF4F1]">
+    <footer className="bg-cover bg-center relative">
       <div className="container grid grid-cols-3 gap-4 ">
         <div>
           <h2 className=" text-2xl font-bold "> Visit Us: </h2>

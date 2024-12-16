@@ -1,24 +1,20 @@
 "use client";
 
+import LOGO from "../assets/logo.png";
+
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(null); // Track which menu is active
+  const [activeMenu, setActiveMenu] = useState(null);
 
-  // Toggle mobile menu visibility
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // Handle mouse enter and leave for dropdowns (for desktop)
   const handleMouseEnter = (index) => setActiveMenu(index);
   const handleMouseLeave = () => setActiveMenu(null);
 
-  // Dynamic button classes for Get Started button
-  const buttonClass =
-    "border-2 border-black text-black hover:bg-black hover:text-white";
-
-  // Desktop and mobile menu links data
   const menuItems = [
     { href: "/menu-1", label: "Menu 1" },
     { href: "/menu-2", label: "Menu 2" },
@@ -28,19 +24,16 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white text-foreground px-4 py-3 shadow-md transition-all duration-300 sticky top-0 z-50">
+    <nav className="py-4 sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-xl font-semibold">
-          <Link href="/" className="text-primary">
-            MyLogo
+        <div className="text-2xl font-semibold">
+          <Link href="/">
+            <Image src={LOGO} alt="logo" width={100} height={100} />
           </Link>
         </div>
 
-        {/* Dropdown Menus (Desktop and Mobile/Tablets view) */}
         <div className="hidden md:flex space-x-6">
           {" "}
-          {/* Hidden on mobile/tablet and visible on desktop */}
           {menuItems.map((menu, index) => (
             <div
               key={menu.label}
@@ -55,7 +48,6 @@ export default function Navbar() {
                 onClick={() => window.innerWidth <= 768 && setActiveMenu(index)} // Toggle on mobile click
               >
                 {menu.label}
-                {/* Down Arrow Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className={`w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out ${
@@ -71,8 +63,6 @@ export default function Navbar() {
                   <path d="M6 9l6 6 6-6"></path>
                 </svg>
               </button>
-
-              {/* Dropdown Content */}
               <div
                 className={`absolute left-0 mt-2 w-48 bg-white dark:bg-gray-700 text-primary dark:text-white rounded-lg shadow-lg transition-all duration-200 ease-in-out ${
                   activeMenu === index
@@ -105,17 +95,12 @@ export default function Navbar() {
             </div>
           ))}
         </div>
+        {/* dhvfdsbvjb */}
 
-        {/* Right Button (Desktop view) */}
         <div className="hidden md:flex space-x-4">
-          <button
-            className={`px-6 py-2 rounded-md border-2 focus:outline-none ${buttonClass}`}
-          >
-            Get Started
-          </button>
+          <button className="customButton">Contact Us</button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
           className="md:hidden text-primary"
@@ -151,7 +136,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
         <div className="flex flex-col items-center space-y-4 py-4">
           {menuItems.map((menu, index) => (
@@ -162,24 +146,25 @@ export default function Navbar() {
                   setActiveMenu(activeMenu === index ? null : index)
                 }
               >
-                {menu.label}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={`w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out ${
-                    activeMenu === index ? "rotate-180" : "rotate-0"
-                  }`}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
+                <div className=" flex justify-center items-center">
+                  {menu.label}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`w-4 h-4 ml-2 transform transition-transform duration-300 ease-in-out ${
+                      activeMenu === index ? "rotate-180" : "rotate-0"
+                    }`}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </div>
               </button>
 
-              {/* Mobile dropdown (click to toggle) */}
               <div
                 className={`${
                   activeMenu === index ? "block" : "hidden"
@@ -208,9 +193,7 @@ export default function Navbar() {
               </div>
             </div>
           ))}
-          <button className="border-2 border-black text-black hover:bg-black hover:text-white rounded-md px-6 py-2 focus:outline-none">
-            Get Started
-          </button>
+          <button className="customButton">Contact Us</button>
         </div>
       </div>
     </nav>

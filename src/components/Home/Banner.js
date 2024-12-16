@@ -1,7 +1,7 @@
 export default function Banner() {
   return (
     <>
-      <h3>Banner</h3>
+      <h3 className=" text-primary ">Banner</h3>
     </>
   );
 }

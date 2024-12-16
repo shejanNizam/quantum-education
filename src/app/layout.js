@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-serif`} // Adding font-serif here
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-serif bg-[#FAF4F1]`}
         style={{ fontFamily: "'Fraunces', serif" }} // Apply Fraunces as fallback
       >
         <Navbar />
