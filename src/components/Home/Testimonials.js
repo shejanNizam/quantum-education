@@ -1,5 +1,6 @@
 "use client";
 
+import { Card, CardContent } from "@/components/ui/card"; // Assuming you've imported from ShadCN components
 import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -49,7 +50,7 @@ export default function Testimonials() {
         Authentic Student Testimonials
       </h2>
       <Swiper
-        navigation
+        // navigation
         pagination={{ type: "bullets", clickable: true }}
         autoplay={true}
         loop={true}
@@ -59,20 +60,24 @@ export default function Testimonials() {
         {data.map(({ _id, image, name, description }) => (
           <SwiperSlide
             key={_id}
-            className="bg-white flex justify-center items-center p-20"
+            className="flex justify-center items-center p-8"
           >
-            <div className="flex flex-col items-center text-center ">
-              <Image
-                className="rounded-full mb-6"
-                width={100}
-                height={100}
-                src={image}
-                alt={`${name} testimonial`}
-                quality={100}
-              />
-              <h3 className="text-xl font-semibold text-gray-800">{name}</h3>
-              <p className="text-gray-600 mt-4 px-2">{description}</p>
-            </div>
+            <Card className="w-full sm:w-[250px] md:w-[300px] lg:w-[350px] mx-auto p-4">
+              <CardContent className="bg-white rounded flex flex-col items-center text-center p-2">
+                <Image
+                  className="rounded-full mb-6"
+                  width={100}
+                  height={100}
+                  src={image}
+                  alt={`${name} testimonial`}
+                  quality={100}
+                />
+                <p size="lg" className="font-semibold text-gray-800">
+                  {name}
+                </p>
+                <p className="text-gray-600 mt-4 px-4">{description}</p>
+              </CardContent>
+            </Card>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,41 +1,69 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import Image from "next/image";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import image1 from "../../assets/alumni_work/alumni_work_image_1.png";
+import image2 from "../../assets/alumni_work/alumni_work_image_2.png";
+import image5 from "../../assets/alumni_work/alumni_work_image_5.png";
 
 export default function AlumniWork() {
+  const data = [
+    { _id: 1, image: image1 },
+    { _id: 2, image: image2 },
+    { _id: 3, image: image5 },
+    { _id: 4, image: image1 },
+    { _id: 5, image: image2 },
+    { _id: 6, image: image5 },
+  ];
+
   return (
-    <div className="my-20">
-      <h2 className="text-6xl text-center font-bold mb-12">
-        {" "}
-        Where Our Alumni Work{" "}
+    <section className="container py-16">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl text-center mb-12 font-bold">
+        Where Our Alumni Work
       </h2>
-      <Carousel
-        opts={{
-          align: "start",
+
+      <Swiper
+        pagination={{ type: "bullets", clickable: true }}
+        autoplay={true}
+        loop={true}
+        modules={[Autoplay, Navigation, Pagination]}
+        className="relative"
+        slidesPerView={4}
+        spaceBetween={20}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
         }}
-        className="w-full max-w-sm mx-auto"
       >
-        <CarouselContent>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-              <div className="p-1">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="text-3xl font-semibold">{index + 1}</span>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+        {data.map(({ _id, image }, index) => (
+          <SwiperSlide key={_id} className="flex justify-center items-center">
+            <Card className="w-full sm:w-[250px] md:w-[300px] lg:w-[350px] mx-auto p-4">
+              <CardContent className="bg-white rounded flex items-center justify-center text-center p-4">
+                <div className="w-full h-full relative">
+                  <Image
+                    src={image}
+                    alt={`Alumni work ${index + 1}`}
+                    layout="responsive"
+                    width={index % 2 === 0 ? 350 : 300}
+                    height={index % 2 === 0 ? 250 : 200}
+                    className="object-cover rounded-md"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
   );
 }
