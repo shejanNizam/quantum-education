@@ -1,12 +1,10 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card"; // Assuming you've imported from ShadCN components
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import image1 from "../../assets/testimonial/testimonial_image_1.png";
 import image2 from "../../assets/testimonial/testimonial_image_2.png";
 import image3 from "../../assets/testimonial/testimonial_image_3.png";
@@ -49,19 +47,29 @@ export default function Testimonials() {
       <h2 className="text-6xl text-center mb-12 font-bold">
         Authentic Student Testimonials
       </h2>
+
       <Swiper
-        // navigation
         pagination={{ type: "bullets", clickable: true }}
         autoplay={true}
         loop={true}
         modules={[Autoplay, Navigation, Pagination]}
         className="relative"
+        slidesPerView={3}
+        spaceBetween={20}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 2,
+          },
+        }}
       >
         {data.map(({ _id, image, name, description }) => (
-          <SwiperSlide
-            key={_id}
-            className="flex justify-center items-center p-8"
-          >
+          <SwiperSlide key={_id} className="flex justify-center items-center">
             <Card className="w-full sm:w-[250px] md:w-[300px] lg:w-[350px] mx-auto p-4">
               <CardContent className="bg-white rounded flex flex-col items-center text-center p-2">
                 <Image
