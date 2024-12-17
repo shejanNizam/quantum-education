@@ -8,7 +8,7 @@ import logo3 from "../../assets/updates/update_icon_3.png";
 export default function Updates() {
   return (
     <>
-      <div className=" container my-32">
+      <div className="container my-32">
         <h2 className="text-center text-6xl font-bold mb-12">Latest Updates</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-20">
           <div>
