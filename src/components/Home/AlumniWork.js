@@ -31,17 +31,20 @@ export default function AlumniWork() {
         loop={true}
         modules={[Autoplay, Navigation, Pagination]}
         className="relative"
-        slidesPerView={4}
+        slidesPerView={1} // Default to 1 slide per view on mobile
         spaceBetween={20}
         breakpoints={{
           640: {
-            slidesPerView: 1,
+            slidesPerView: 1, // 1 slide per view on small screens
+            spaceBetween: 10, // Reduced space between cards for small screens
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 2, // 2 slides per view on tablets
+            spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 4,
+            slidesPerView: 4, // 4 slides per view on larger screens (desktop)
+            spaceBetween: 30, // Slightly more space between slides
           },
         }}
       >
