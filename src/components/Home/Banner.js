@@ -31,7 +31,7 @@ export default function Banner() {
             src={BANNER_ING}
             alt="banner_img"
             className="w-full h-full lg:h-[700px] object-cover"
-            sizes="80vw"
+            sizes="100vw"
           />
         </div>
       </div>
