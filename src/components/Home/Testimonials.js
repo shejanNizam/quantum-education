@@ -2,6 +2,9 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -52,6 +55,7 @@ export default function Testimonials() {
         pagination={{ type: "bullets", clickable: true }}
         autoplay={true}
         loop={true}
+        navigation={true}
         modules={[Autoplay, Navigation, Pagination]}
         className="relative"
         slidesPerView={3}
@@ -64,13 +68,16 @@ export default function Testimonials() {
             slidesPerView: 2,
           },
           1024: {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
         }}
       >
         {data.map(({ _id, image, name, description }) => (
-          <SwiperSlide key={_id} className="flex justify-center items-center">
-            <Card className="w-full sm:w-[250px] md:w-[300px] lg:w-[350px] mx-auto p-4">
+          <SwiperSlide
+            key={_id}
+            className="flex justify-center items-center p-8"
+          >
+            <Card className="w-full max-w-[350px] mx-auto p-4">
               <CardContent className="bg-white rounded flex flex-col items-center text-center p-2">
                 <Image
                   className="rounded-full mb-6"
@@ -80,9 +87,7 @@ export default function Testimonials() {
                   alt={`${name} testimonial`}
                   quality={100}
                 />
-                <p size="lg" className="font-semibold text-gray-800">
-                  {name}
-                </p>
+                <p className="font-semibold text-gray-800">{name}</p>
                 <p className="text-gray-600 mt-4 px-4">{description}</p>
               </CardContent>
             </Card>
