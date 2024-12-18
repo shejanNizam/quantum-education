@@ -3,7 +3,7 @@ import logo1 from "../../assets/unique/unique_icon_1.webp";
 import logo2 from "../../assets/unique/unique_icon_2.webp";
 import logo3 from "../../assets/unique/unique_icon_3.webp";
 import logo4 from "../../assets/unique/unique_icon_4.webp";
-import UPDATE_IMG from "../../assets/unique/unique_image.webp";
+import UNIQUE_IMG from "../../assets/unique/unique_image.webp";
 
 export default function QuantumUnique() {
   return (
@@ -13,7 +13,7 @@ export default function QuantumUnique() {
           {" "}
           What Makes Quantum Unique?{" "}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center gap-12">
           <div className="p-8">
             <div className="mb-8">
               <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
@@ -64,12 +64,9 @@ export default function QuantumUnique() {
               </ul>
             </div>
           </div>
-          <Image
-            src={UPDATE_IMG}
-            alt="UPDATE_IMG"
-            className="w-full h-full lg:h-[650px] object-cover"
-            sizes="100vw"
-          />
+          <div className=" w-full ">
+            <Image src={UNIQUE_IMG} alt="UNIQUE_IMG" className="mx-auto" />
+          </div>
         </div>
       </div>
     </>
