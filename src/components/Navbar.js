@@ -127,6 +127,7 @@ export default function Navbar() {
         },
       ],
     },
+    // current-students ok
     {
       href: "/news-media",
       label: "News and Media",
