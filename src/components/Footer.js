@@ -1,10 +1,17 @@
 "use client";
 
+import FOOTER_IMG from "../assets/logo_bg.png";
+
+import Image from "next/image";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-cover bg-center relative">
+      <div className="flex justify-center">
+        <Image src={FOOTER_IMG} alt="FOOTER_IMG" />
+      </div>
+
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
         <div>
           <h2 className=" text-2xl font-bold "> Visit Us: </h2>
