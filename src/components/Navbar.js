@@ -110,6 +110,7 @@ export default function Navbar() {
         },
       ],
     },
+    // tution-financial ok
     {
       href: "/current-students",
       label: "Current Students",
