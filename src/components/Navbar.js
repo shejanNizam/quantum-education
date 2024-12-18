@@ -106,7 +106,7 @@ export default function Navbar() {
                     .replace(" ", "-")}-details`}
                   className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 focus:outline-none"
                 >
-                  Link 2
+                  Link 22222
                 </Link>
                 <Link
                   href={`/${menu.label.toLowerCase().replace(" ", "-")}-info`}
