@@ -306,15 +306,34 @@ export default function Navbar() {
                               className="flex justify-between items-center w-full rounded-md text-sm font-medium px-2 py-2 bg-gray-300 hover:text-primary"
                               onClick={() => handleSubMenuToggle(subIndex)}
                             >
-                              {sub.label}
-                              {sub.subSubMenu && (
-                                <FaChevronRight
-                                  className={`transition-transform ${
-                                    activeSubMenu === subIndex
-                                      ? "rotate-90"
-                                      : ""
-                                  }`}
-                                />
+                              {sub.subSubMenu ? (
+                                <>
+                                  {sub.label}
+                                  {sub.subSubMenu && (
+                                    <FaChevronRight
+                                      className={`transition-transform ${
+                                        activeSubMenu === subIndex
+                                          ? "rotate-90"
+                                          : ""
+                                      }`}
+                                    />
+                                  )}
+                                </>
+                              ) : (
+                                <>
+                                  <Link href={sub.href}>
+                                    {sub.label}
+                                    {sub.subSubMenu && (
+                                      <FaChevronRight
+                                        className={`transition-transform ${
+                                          activeSubMenu === subIndex
+                                            ? "rotate-90"
+                                            : ""
+                                        }`}
+                                      />
+                                    )}
+                                  </Link>
+                                </>
                               )}
                             </button>
                             {sub.subSubMenu && activeSubMenu === subIndex && (
