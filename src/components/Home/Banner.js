@@ -6,7 +6,7 @@ export default function Banner() {
   return (
     <>
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center gap-12">
-        <div className="">
+        <div>
           <h1 className="text-8xl text-primary font-bold mt-8 mb-20">
             Welcome To Quantum
           </h1>
@@ -26,7 +26,7 @@ export default function Banner() {
           </div>
         </div>
 
-        <div className="">
+        <div>
           <Image
             src={BANNER_ING}
             alt="banner_img"
