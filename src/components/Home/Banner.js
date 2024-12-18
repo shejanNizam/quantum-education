@@ -20,6 +20,7 @@ export default function Banner() {
             your spot on our waiting list for the Summer Semester of {"2024"}.
           </p>
           <div className="flex items-center gap-4 my-8">
+            {/* when click this button go to registration from below home page */}
             <button className="customButton">Apply Today</button>
 
             <Link href={`/about-us/faqs`}>
