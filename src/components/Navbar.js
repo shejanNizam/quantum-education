@@ -54,6 +54,7 @@ export default function Navbar() {
         { href: "/about-us/faqs", label: "FAQs" },
       ],
     },
+    // about us ok
     {
       href: "/academics",
       label: "Academics",
@@ -97,6 +98,7 @@ export default function Navbar() {
         { href: "/academics/academic-calendar", label: "Academic Calendar" },
       ],
     },
+    // academics ok
     {
       href: "/tution-financial",
       label: "Tuition & Financial Aid",
