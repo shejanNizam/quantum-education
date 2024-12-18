@@ -52,26 +52,26 @@ export default function Testimonials() {
       </h2>
 
       <Swiper
-        pagination={{ type: "bullets", clickable: true }}
+        // pagination={{ type: "bullets", clickable: true }}
         autoplay={true}
         loop={true}
-        // navigation={true}  // Uncomment if you need navigation arrows
+        navigation={true}
         modules={[Autoplay, Navigation, Pagination]}
         className="relative"
-        slidesPerView={1} // Default to 1 slide per view for mobile
+        slidesPerView={1}
         spaceBetween={20}
         breakpoints={{
           640: {
-            slidesPerView: 1, // 1 slide per view on small screens (mobile)
-            spaceBetween: 10, // Reduced space between cards for small screens
+            slidesPerView: 1,
+            spaceBetween: 10,
           },
           768: {
-            slidesPerView: 2, // 2 slides per view on tablets
+            slidesPerView: 2,
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 3, // 3 slides per view on larger screens (desktop)
-            spaceBetween: 30, // Slightly more space between slides
+            slidesPerView: 3,
+            spaceBetween: 30,
           },
         }}
       >
