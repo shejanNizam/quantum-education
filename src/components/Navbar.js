@@ -205,13 +205,13 @@ export default function Navbar() {
                     >
                       <div className="flex justify-between items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">
                         {sub.subSubMenu ? (
-                          <span className="text-gray-800 dark:text-gray-200 font-medium">
+                          <span className="text-primary dark:text-gray-200 font-medium">
                             {sub.label}
                           </span>
                         ) : (
                           <Link
                             href={sub.href}
-                            className="block text-gray-800 dark:text-gray-200 font-medium"
+                            className="block text-primary dark:text-gray-200 font-medium"
                           >
                             {sub.label}
                           </Link>
