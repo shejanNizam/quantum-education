@@ -4,11 +4,12 @@ import LOGO from "../assets/logo.png";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -23,24 +24,36 @@ export default function Navbar() {
     { href: "/menu-5", label: "Menu 5" },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="py-4 sticky top-0 z-50">
+    <nav
+      className={`py-1 sticky top-0 z-50 transition-colors duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-semibold">
           <Link href="/">
-            <Image
-              src={LOGO}
-              alt="logo"
-              style={{
-                width: "auto",
-                height: "auto",
-              }}
-            />
+            <Image src={LOGO} alt="logo" width={80} height={80} />
           </Link>
         </div>
 
         <div className="hidden md:flex space-x-6">
-          {" "}
           {menuItems.map((menu, index) => (
             <div
               key={menu.label}
@@ -49,7 +62,9 @@ export default function Navbar() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className="flex items-center text-primary font-semibold py-2 px-4 rounded-md hover:bg-primary/10 focus:outline-none"
+                className={`flex items-center font-semibold py-2 px-4 rounded-md hover:bg-primary/10 focus:outline-none ${
+                  isScrolled ? "text-black" : "text-primary"
+                }`}
                 aria-haspopup="true"
                 aria-expanded={activeMenu === index ? "true" : "false"}
                 onClick={() => window.innerWidth <= 768 && setActiveMenu(index)} // Toggle on mobile click
@@ -102,7 +117,6 @@ export default function Navbar() {
             </div>
           ))}
         </div>
-        {/* dhvfdsbvjb */}
 
         <div className="hidden md:flex space-x-4">
           <button className="customButton">Contact Us</button>
@@ -153,7 +167,7 @@ export default function Navbar() {
                   setActiveMenu(activeMenu === index ? null : index)
                 }
               >
-                <div className=" flex justify-center items-center">
+                <div className="flex justify-center items-center">
                   {menu.label}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
