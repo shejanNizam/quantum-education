@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { CgArrowTopRight } from "react-icons/cg";
 import BANNER_ING from "../../assets/banner_img/image_2.webp";
 
@@ -20,9 +21,13 @@ export default function Banner() {
           </p>
           <div className="flex items-center gap-4 my-8">
             <button className="customButton">Apply Today</button>
-            <button className="customButton flex items-center">
-              Learn More <CgArrowTopRight />{" "}
-            </button>
+
+            <Link href={`/about-us/faqs`}>
+              <button className="customButton flex items-center">
+                {" "}
+                Learn More <CgArrowTopRight />{" "}
+              </button>
+            </Link>
           </div>
         </div>
 

@@ -251,7 +251,9 @@ export default function Navbar() {
             </div>
           ))}
           {/* Contact Us Button for Desktop */}
-          <button className="customButton">Contact Us</button>
+          <button className="customButton">
+            <Link href={`/contact`}> Contact Us </Link>
+          </button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -356,7 +358,9 @@ export default function Navbar() {
                     )}
                   </div>
                 ))}
-                <button className="customButton mt-6">Contact Us</button>
+                <button className="customButton mt-6">
+                  <Link href={`/contact`}> Contact Us </Link>
+                </button>
               </div>
             </div>
           </div>
