@@ -26,25 +26,26 @@ export default function AlumniWork() {
       </h2>
 
       <Swiper
-        pagination={{ type: "bullets", clickable: true }}
+        // pagination={{ type: "bullets", clickable: true }}
+        // navigation={true}
         autoplay={true}
         loop={true}
         modules={[Autoplay, Navigation, Pagination]}
         className="relative"
-        slidesPerView={1} // Default to 1 slide per view on mobile
+        slidesPerView={1}
         spaceBetween={20}
         breakpoints={{
           640: {
-            slidesPerView: 1, // 1 slide per view on small screens
-            spaceBetween: 10, // Reduced space between cards for small screens
+            slidesPerView: 1,
+            spaceBetween: 10,
           },
           768: {
-            slidesPerView: 2, // 2 slides per view on tablets
+            slidesPerView: 2,
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 4, // 4 slides per view on larger screens (desktop)
-            spaceBetween: 30, // Slightly more space between slides
+            slidesPerView: 4,
+            spaceBetween: 20,
           },
         }}
       >
