@@ -49,7 +49,7 @@ export default function Navbar() {
           href: "/about-us/accreditation-certification",
           label: "Accreditation and Certification",
         },
-        { href: "/about-us/contact-info", label: "Contact Information" },
+        { href: "/contact", label: "Contact Information" },
         { href: "/about-us/alumni-association", label: "Alumni Association" },
         { href: "/about-us/faqs", label: "FAQs" },
       ],
