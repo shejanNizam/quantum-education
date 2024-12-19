@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IoIosMailOpen } from "react-icons/io";
 import image3 from "../../../assets/about_us/coo_single_img.png";
 import image1 from "../../../assets/about_us/founder_single_img.png";
 import image2 from "../../../assets/about_us/president_single_img.webp";
@@ -103,9 +104,39 @@ export default function LeadershipStaffPage() {
           ))}
         </div>
 
-        <div>
-          <p></p>
-          <p></p>
+        <div className=" flex flex-col lg:flex-row w-full gap-12">
+          <p className=" w-[70%] ">
+            For a comprehensive list of our esteemed faculty and staff members,
+            please visit the student portal or reach out to us via email at
+            faculty@qust.education If you wish to connect with our{" "}
+            <span className="font-bold text-xl text-primary">
+              {" "}
+              Financial Aid{" "}
+            </span>
+            office, please email us at{" "}
+            <span className="font-bold text-xl text-primary">
+              financialaid@qust.education
+            </span>{" "}
+            <br />
+            For all other inquiries email us at{" "}
+            <span className="font-bold text-xl text-primary">
+              info@qust.education
+            </span>{" "}
+            At Quantum Institute of Science and Technology, we are committed to
+            fostering excellence in education and research, and our leadership
+            team is here to guide you every step of the way. Join us in shaping
+            the future of technology and artificial intelligence.
+          </p>
+          <div className=" w-[30%] ">
+            <IoIosMailOpen className="w-[50px] h-[50px]" />
+
+            <p className="text-2xl text-primary font-bold ">
+              info@qust.education
+            </p>
+            <p className="text-2xl text-primary font-bold ">
+              financialaid@qust.education
+            </p>
+          </div>
         </div>
       </div>
     </>
