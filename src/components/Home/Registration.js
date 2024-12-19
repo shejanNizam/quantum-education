@@ -3,14 +3,8 @@ export default function Registration() {
     <>
       <div className="py-16">
         <h3 className="text-6xl text-center font-bold "> Register Now </h3>
-        <div>
-          <p>Register</p>
-          <p>Register</p>
-          <p>Register</p>
-          <p>Register</p>
-          <p>Register</p>
-          <p>Register</p>
-          <p>Register</p>
+        <div className="text-center text-3xl text-red-600 font-semibold mt-12">
+          <p>Register Form Here</p>
         </div>
       </div>
     </>
