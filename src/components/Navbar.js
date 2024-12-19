@@ -137,6 +137,7 @@ export default function Navbar() {
         { href: "/news-media/blog", label: "Blog" },
       ],
     },
+    //  news and media ok
   ];
 
   useEffect(() => {
