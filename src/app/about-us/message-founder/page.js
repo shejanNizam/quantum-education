@@ -18,26 +18,27 @@ export default function MessageFounderPage() {
         <br />
         <p>
           {" "}
-          Dear students and parents, <br /> Embarking on the journey of
-          education has always been shrouded in uncertainty, a path filled with
-          questions about passions, career paths, and the alignment of dreams
-          with reality. As I reflect on my own journey, I vividly recall the
-          challenges of selecting subjects, seeking guidance, and striving for a
-          balance between ambition and practicality. Throughout my educational
-          odyssey, from school to college, I often found a lack of personalized
-          attention and mentors who truly understood the nuances of each
-          student’s aspirations. Quantum Institute of Science and Technology is
-          conceived with a steadfast commitment to bridging these gaps. We have
-          meticulously crafted a curriculum that not only addresses industry
-          demands but also transforms education into an engaging, enjoyable, and
-          accessible endeavor. Our institution is resolutely focused on
-          converging the brilliance of artificial intelligence with the
-          creativity of human minds, preparing students to shape a brighter
-          tomorrow. In a world where the transition from education to employment
-          can be challenging, we have revolutionized our educational approach.
-          Our programs are meticulously designed to align with the contemporary
-          needs of various industries, including modern healthcare delivery,
-          financial institutions, and governmental sectors. Gone are the days of
+          <span className="font-semibold">Dear students and parents,</span>{" "}
+          <br /> Embarking on the journey of education has always been shrouded
+          in uncertainty, a path filled with questions about passions, career
+          paths, and the alignment of dreams with reality. As I reflect on my
+          own journey, I vividly recall the challenges of selecting subjects,
+          seeking guidance, and striving for a balance between ambition and
+          practicality. Throughout my educational odyssey, from school to
+          college, I often found a lack of personalized attention and mentors
+          who truly understood the nuances of each student’s aspirations.
+          Quantum Institute of Science and Technology is conceived with a
+          steadfast commitment to bridging these gaps. We have meticulously
+          crafted a curriculum that not only addresses industry demands but also
+          transforms education into an engaging, enjoyable, and accessible
+          endeavor. Our institution is resolutely focused on converging the
+          brilliance of artificial intelligence with the creativity of human
+          minds, preparing students to shape a brighter tomorrow. In a world
+          where the transition from education to employment can be challenging,
+          we have revolutionized our educational approach. Our programs are
+          meticulously designed to align with the contemporary needs of various
+          industries, including modern healthcare delivery, financial
+          institutions, and governmental sectors. Gone are the days of
           uncertainty; our graduates are primed to enter the professional arena
           with confidence, armed with skills that are not only relevant but also
           in high demand. As the Founder and CEO of Quantum, my journey has been
