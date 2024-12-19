@@ -10,7 +10,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-cover bg-center relative">
-      <div className="flex justify-center">
+      <div className="flex justify-center m-8">
         <Image src={FOOTER_IMG} alt="FOOTER_IMG" />
       </div>
 
