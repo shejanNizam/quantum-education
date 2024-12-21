@@ -1,16 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
 
-import {
-  FaEnvelope,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaMapMarkerAlt,
-  FaPhone,
-} from "react-icons/fa";
+import ContactFormComp from "@/lib/ContactFormComp";
+import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import CONTACT_IMAGE from "../../assets/about_us/contact_img.webp";
-import ContactForm from "@/lib/ContactForm";
 
 export default function ContactPage() {
   return (
@@ -21,7 +13,7 @@ export default function ContactPage() {
           <Image src={CONTACT_IMAGE} alt="CONTACT_IMAGE" />
         </div>
 
-        <ContactForm />
+        <ContactFormComp />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 bg-gray-50 my-12">
           {/* Address Section */}

@@ -1,4 +1,4 @@
-import ContactForm from "@/lib/ContactForm";
+import ContactFormComp from "@/lib/ContactFormComp";
 import Image from "next/image";
 import LOGO from "../../../assets/logo.png";
 
@@ -30,7 +30,7 @@ export default function FaqsPage() {
         {/* Accordion faqs */}
         <div className=" text-center my-12 "> Accordion </div>
 
-        <ContactForm />
+        <ContactFormComp />
       </div>
     </>
   );

@@ -3,7 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
-export default function ContactForm() {
+export default function ContactFormComp() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20 px-4">
