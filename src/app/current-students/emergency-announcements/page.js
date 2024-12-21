@@ -1,4 +1,4 @@
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function EmergencyAnnouncementsPage() {
   return (
@@ -61,6 +61,10 @@ export default function EmergencyAnnouncementsPage() {
               <FaEnvelope className="text-6xl text-primary mb-4" />
               <p className="text-2xl font-bold text-gray-800">
                 info@qust.education
+              </p>
+              <FaPhone className="text-6xl text-primary mb-4" />
+              <p className="text-2xl font-bold text-gray-800">
+                +1 (555) 123-4567
               </p>
             </div>
           </div>
