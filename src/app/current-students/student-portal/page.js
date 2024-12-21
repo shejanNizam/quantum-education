@@ -1,35 +1,43 @@
 import { FaEnvelope } from "react-icons/fa";
 
+import {
+  FaBook,
+  FaBullhorn,
+  FaClipboard,
+  FaComments,
+  FaGraduationCap,
+} from "react-icons/fa";
+
 const infoCards = [
   {
     title: "Course Access",
     description:
       "Access your courses, assignments, and study materials 24/7, from anywhere with an internet connection",
-    icon: "📄", // Replace with a React Icon if needed
+    icon: <FaBook />,
   },
   {
     title: "Grades and Progress",
     description:
       "Stay updated on your academic progress with real-time access to your grades and feedback from instructors",
-    icon: "🏅", // Replace with a React Icon if needed
+    icon: <FaGraduationCap />,
   },
   {
     title: "Communication",
     description:
       "Connect with your instructors and fellow students through built-in communication tools, making collaboration a breeze",
-    icon: "🤝", // Replace with a React Icon if needed
+    icon: <FaComments />,
   },
   {
     title: "Resource Library",
     description:
       "Explore a wealth of resources, including lecture notes, textbooks, and supplementary materials to support your learning",
-    icon: "✏️", // Replace with a React Icon if needed
+    icon: <FaClipboard />,
   },
   {
     title: "Announcements",
     description:
       "Stay in the loop with important announcements, deadlines, and updates from Quantum.",
-    icon: "📢", // Replace with a React Icon if needed
+    icon: <FaBullhorn />,
   },
 ];
 
@@ -71,7 +79,7 @@ export default function StudentPortalPage() {
                 className="p-6 bg-white shadow-md rounded-lg border border-gray-200 flex items-start gap-4"
               >
                 {/* Icon */}
-                <div className="text-4xl text-purple-800">{card.icon}</div>
+                <div className="text-4xl text-primary">{card.icon}</div>
 
                 {/* Content */}
                 <div>
