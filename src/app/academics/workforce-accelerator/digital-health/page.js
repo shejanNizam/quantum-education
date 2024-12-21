@@ -6,6 +6,7 @@ export default function DigitalHealthPage() {
     <>
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <WorkforceAcceleratorComp
+          topHeading={`Digital Health Accelerator Mentorship`}
           heading={`Your path to success in the digital health sector!`}
           description={`Unlock new opportunities with tailored consultation/mentorship and a strong focus on customer and clinical strategy. Discover the power of AI and human-centered journeys to revolutionize healthcare delivery. Exclusively available for digital business certified individuals or those with 3-7 years of professional experience, including Master’s degree holders in healthcare management, MDs, DOs, and PharmDs.
 

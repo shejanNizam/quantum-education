@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaEnvelope, FaPlusCircle } from "react-icons/fa";
 
 export default function WorkforceAcceleratorComp({
+  topHeading,
   heading,
   description,
   image,
@@ -9,6 +10,7 @@ export default function WorkforceAcceleratorComp({
   return (
     <>
       <div className="p-8 bg-gray-50">
+        <h1 className="text-center text-6xl font-bold mb-8"> {topHeading} </h1>
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Image Section */}
           <div className="flex justify-center">
