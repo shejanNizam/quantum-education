@@ -49,7 +49,7 @@ export default function Navbar() {
           href: "/about-us/accreditation-certification",
           label: "Accreditation and Certification",
         },
-        { href: "/about-us/contact-info", label: "Contact Information" },
+        { href: "/contact", label: "Contact Information" },
         { href: "/about-us/alumni-association", label: "Alumni Association" },
         { href: "/about-us/faqs", label: "FAQs" },
       ],
@@ -164,7 +164,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-semibold">
-          <Link href="/">
+          <Link href={`/`}>
             <Image src={LOGO} alt="logo" width={100} height={100} />
           </Link>
         </div>
@@ -252,9 +252,9 @@ export default function Navbar() {
             </div>
           ))}
           {/* Contact Us Button for Desktop */}
-          <button className="customButton">
-            <Link href={`/contact`}> Contact Us </Link>
-          </button>
+          <Link href={`/contact`}>
+            <button className="customButton">Contact Us</button>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -281,7 +281,9 @@ export default function Navbar() {
           <div className="fixed top-0 left-0 w-3/4 max-w-xs h-full bg-white z-50 shadow-lg">
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center px-4 py-3">
-                <Image src={LOGO} alt="logo" width={80} height={80} />
+                <Link href={`/`}>
+                  <Image src={LOGO} alt="logo" width={80} height={80} />
+                </Link>
                 <button onClick={toggleMenu}>
                   <FaTimes size={24} className="text-primary" />
                 </button>
@@ -359,9 +361,9 @@ export default function Navbar() {
                     )}
                   </div>
                 ))}
-                <button className="customButton mt-6">
-                  <Link href={`/contact`}> Contact Us </Link>
-                </button>
+                <Link href={`/contact`}>
+                  <button className="customButton mt-6">Contact Us</button>
+                </Link>
               </div>
             </div>
           </div>
