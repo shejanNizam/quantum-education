@@ -1,9 +1,36 @@
+import AcademicGraUndCalComp from "@/lib/AcademicGraUndCalComp";
+
+import ACADEMIC_CALENDAR_IMG1 from "../../../assets/academics/academic_calender/academic_calendar_img1.webp";
+import ACADEMIC_CALENDAR_IMG2 from "../../../assets/academics/academic_calender/academic_calendar_img2.jpg";
+
+const sections = [
+  {
+    imageSrc: ACADEMIC_CALENDAR_IMG1,
+    imageAlt: "Notebook and Pen",
+    heading: "Stay Informed",
+    description:
+      "We believe in transparency and will update our website and social media channels if and when we introduce any undergraduate programs in the future. We are dedicated to keeping you informed about any exciting developments on the horizon.",
+  },
+  {
+    imageSrc: ACADEMIC_CALENDAR_IMG2,
+    imageAlt: "Streetlight near a cliff",
+    heading: "Explore Professional Studies",
+    description:
+      "In the meantime, we invite you to explore our professional studies programs. These programs are thoughtfully designed to equip you with valuable skills and knowledge in emerging fields. They offer an excellent avenue for career advancement or embarking on a new educational journey.",
+  },
+];
+
 export default function AcademicCalendarPage() {
   return (
     <>
-      <h3 className=" text-3xl text-center font-bold py-4 min-h-screen flex items-center justify-center">
-        AcademicCalendarPage
-      </h3>
+      <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
+        <AcademicGraUndCalComp
+          subHeading={`Academic Calendar`}
+          heading={`Explore Quantum's Academic Calendar`}
+          description={`Our academic calendar is a vital resource for both students and prospective learners. Here’s how you can access it:`}
+          sections={sections}
+        />
+      </div>
     </>
   );
 }
