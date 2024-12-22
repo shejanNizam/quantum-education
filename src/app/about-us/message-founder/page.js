@@ -1,5 +1,5 @@
-import Image from "next/image";
 import FOUNDER_IMAGE from "@/assets/about_us/founder_chancellor_img.webp";
+import Image from "next/image";
 
 export default function MessageFounderPage() {
   return (

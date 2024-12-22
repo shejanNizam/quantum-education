@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CgArrowTopRight } from "react-icons/cg";
 import BANNER_ING from "../../assets/banner_img/image_2.webp";
 
-export default function Banner() {
+export default function Banner({ onApplyClick }) {
   return (
     <>
       <div className="container py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center gap-12">
@@ -21,7 +21,9 @@ export default function Banner() {
           </p>
           <div className="flex items-center gap-4 my-8">
             {/* when click this button go to registration from below home page */}
-            <button className="customButton">Apply Today</button>
+            <button className="customButton" onClick={onApplyClick}>
+              Apply Today
+            </button>
 
             <Link href={`/about-us/faqs`}>
               <button className="customButton flex items-center">
