@@ -6,14 +6,12 @@ export default function RegistrationForm() {
     <div className="">
       <div className="text-center my-12">
         <div className="text-6xl font-bold mb-4"> Register Now </div>
-        <p>
+        <p className="p-4 md:p-0 lg:p-0">
           {" "}
-          It’s never too late to start new career
-          <br />
-          <br />
-          Countdown is finished! <br /> Lorem Ipsum is simply dummy text of the
-          printing and typesetting industry. <br /> Lorem Ipsum has been the
-          industrys standard dummy text ever since the 1500s
+          It’s never too late to start new career <br /> Countdown is finished!{" "}
+          <br /> Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industrys standard
+          dummy text ever since the 1500s
         </p>
       </div>
 

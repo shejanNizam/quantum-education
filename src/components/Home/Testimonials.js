@@ -47,7 +47,7 @@ export default function Testimonials() {
 
   return (
     <section className="container py-16">
-      <h2 className="text-4xl sm:text-5xl md:text-6xl text-center mb-12 font-bold">
+      <h2 className="text-5xl md:text-6xl lg:text-6xl text-center mb-12 font-bold">
         Authentic Student Testimonials
       </h2>
 

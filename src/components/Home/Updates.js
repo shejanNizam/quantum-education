@@ -10,7 +10,7 @@ export default function Updates() {
     <>
       <div className="container my-32">
         <h2 className="text-center text-6xl font-bold mb-12">Latest Updates</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 md:px-12 lg:px-12">
           <div>
             <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
               <Image src={logo1} alt="logo1" width={50} height={50} />

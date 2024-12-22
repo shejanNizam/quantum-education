@@ -9,12 +9,12 @@ export default function QuantumUnique() {
   return (
     <>
       <div className="container my-32">
-        <h2 className="text-center text-6xl font-bold mb-12">
+        <h2 className="text-center text-5xl font-bold mb-12 p-4">
           {" "}
           What Makes Quantum Unique?{" "}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-center items-center gap-12">
-          <div className="p-8">
+          <div className="p-4">
             <div className="mb-8">
               <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
                 <Image src={logo1} alt="logo1" width={40} height={40} />
