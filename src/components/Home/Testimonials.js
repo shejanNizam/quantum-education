@@ -52,7 +52,6 @@ export default function Testimonials() {
       </h2>
 
       <Swiper
-        // pagination={{ type: "bullets", clickable: true }}
         autoplay={true}
         loop={true}
         navigation={true}
