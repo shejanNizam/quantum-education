@@ -2,9 +2,7 @@ import Footer from "@/components/Footer";
 
 import Navbar from "@/components/Navbar";
 import localFont from "next/font/local";
-import { Suspense } from "react";
 import "./globals.css";
-import Loading from "./loading";
 
 // Local Fonts
 const geistSans = localFont({
@@ -32,7 +30,7 @@ export default function RootLayout({ children }) {
         style={{ fontFamily: "'Fraunces', serif" }}
       >
         <Navbar />
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+        {children}
         <Footer />
       </body>
     </html>
