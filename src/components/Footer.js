@@ -87,7 +87,8 @@ export default function Footer() {
       <div className="bg-[#35244C] text-center text-white py-4">
         <p>
           {" "}
-          Copyright ©{"2024"} Quantum Institute of Science and Technology.{" "}
+          Copyright ©{new Date().getFullYear()} Quantum Institute of Science and
+          Technology.{" "}
         </p>
       </div>
     </footer>

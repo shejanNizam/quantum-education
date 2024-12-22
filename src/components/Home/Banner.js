@@ -17,7 +17,8 @@ export default function Banner({ onApplyClick }) {
           </p>
           <p className="font-semibold text-xl">
             Experience the fusion of academia and industry firsthand. Secure
-            your spot on our waiting list for the Summer Semester of {"2024"}.
+            your spot on our waiting list for the{" "}
+            {`Summer Semester of ${new Date().getFullYear()}`}.
           </p>
           <div className="flex items-center gap-4 my-8">
             {/* when click this button go to registration from below home page */}
