@@ -1,3 +1,8 @@
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "FacultyMembers - Quantum Institute" });
+}
+
 export default function FacultyMembersPage() {
   return (
     <>

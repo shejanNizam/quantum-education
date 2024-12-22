@@ -5,6 +5,11 @@ import image1 from "../../../assets/about_us/founder_single_img.png";
 import image2 from "../../../assets/about_us/president_single_img.webp";
 import image4 from "../../../assets/about_us/vice_president_single_img.png";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "LeadershipStaff - Quantum Institute" });
+}
+
 export default function LeadershipStaffPage() {
   const members = [
     {

@@ -2,6 +2,11 @@ import AcademicGraUndCalComp from "@/lib/AcademicGraUndCalComp";
 import GRADUATE_UNDERGRADUATE_IMG1 from "../../../assets/academics/graduate_under_graduate/graduate_under_graduate_img1.webp";
 import GRADUATE_UNDERGRADUATE_IMG2 from "../../../assets/academics/graduate_under_graduate/graduate_under_graduate_img2.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "Graduate - Quantum Institute" });
+}
+
 const sections = [
   {
     imageSrc: GRADUATE_UNDERGRADUATE_IMG1,

@@ -1,6 +1,11 @@
 import Image from "next/image";
 import COO_IMAGE from "../../../assets/about_us/coo_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "MessageCoo - Quantum Institute" });
+}
+
 export default function MessageCooPage() {
   return (
     <>

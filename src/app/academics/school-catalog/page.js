@@ -2,6 +2,11 @@ import Image from "next/image";
 import { FaEnvelope } from "react-icons/fa";
 import SCHOOL_CATALOG_IMG from "../../../assets/academics/school_catalog/school_catalog_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "SchoolCatalog - Quantum Institute" });
+}
+
 export default function SchoolCatalogPage() {
   return (
     <>

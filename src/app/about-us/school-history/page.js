@@ -1,6 +1,11 @@
 import Image from "next/image";
 import SCHOOL_HISTORY_IMAGE from "../../../assets/about_us/school_history_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "SchoolHistory - Quantum Institute" });
+}
+
 export default function SchoolHistoryPage() {
   const schoolHistory = [
     {

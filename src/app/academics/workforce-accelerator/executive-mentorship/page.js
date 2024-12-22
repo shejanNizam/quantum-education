@@ -1,6 +1,11 @@
 import WorkforceAcceleratorComp from "@/lib/WorkforceAcceleratorComp";
 import MENTOR_IMG from "../../../../assets/academics/workforce-accelerator/quantum_mentor_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "ExecutiveMentorship - Quantum Institute" });
+}
+
 export default function ExecutiveMentorshipPage() {
   return (
     <>

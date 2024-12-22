@@ -1,6 +1,11 @@
 import ProfessionalStudiesComp from "@/lib/ProfessionalStudiesComp";
 import DIGITAL_ENGINEERING_IMG from "../../.././../assets/academics/professional-studies/digital_engineering_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "DigitalEngineering - Quantum Institute" });
+}
+
 export default function DigitalEngineeringPage() {
   return (
     <>

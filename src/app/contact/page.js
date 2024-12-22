@@ -4,6 +4,11 @@ import ContactFormComp from "@/lib/ContactFormComp";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import CONTACT_IMAGE from "../../assets/about_us/contact_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "Contact - Quantum Institute" });
+}
+
 export default function ContactPage() {
   return (
     <>

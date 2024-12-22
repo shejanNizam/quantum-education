@@ -3,6 +3,11 @@ import { FaChalkboardTeacher, FaHeadset, FaNetworkWired } from "react-icons/fa";
 import { IoIosMailOpen } from "react-icons/io";
 import ALUMNI_ASSOCIATION_IMAGE from "../../../assets/about_us/alumni_association_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "AlumniAssociation - Quantum Institute" });
+}
+
 export default function AlumniAssociationPage() {
   const alumniBenefits = [
     {

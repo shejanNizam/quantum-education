@@ -3,6 +3,11 @@
 import Link from "next/link";
 import { useEffect } from "react";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "Error - Quantum Institute" });
+}
+
 export default function GlobalError({ error, reset }) {
   useEffect(() => {
     console.error("Global Error: ", error);

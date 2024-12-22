@@ -1,6 +1,11 @@
 import FOUNDER_IMAGE from "@/assets/about_us/founder_chancellor_img.webp";
 import Image from "next/image";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "MessageFounder - Quantum Institute" });
+}
+
 export default function MessageFounderPage() {
   return (
     <>

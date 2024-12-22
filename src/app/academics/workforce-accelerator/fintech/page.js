@@ -1,6 +1,11 @@
 import WorkforceAcceleratorComp from "@/lib/WorkforceAcceleratorComp";
 import FINTECH_IMG from "../../../../assets/academics/workforce-accelerator/quantum_fintech_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "Fintech - Quantum Institute" });
+}
+
 export default function FintechPage() {
   return (
     <>

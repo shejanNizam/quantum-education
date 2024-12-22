@@ -1,6 +1,11 @@
 import Image from "next/image";
 import PRESIDENT_IMAGE from "../../../assets/about_us/president_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "MessagePresident - Quantum Institute" });
+}
+
 export default function MessagePresidentPage() {
   return (
     <>

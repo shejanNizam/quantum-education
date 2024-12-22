@@ -6,6 +6,11 @@ import {
   FaUnlock,
 } from "react-icons/fa";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "StudentRecords - Quantum Institute" });
+}
+
 const services = [
   {
     number: 1,

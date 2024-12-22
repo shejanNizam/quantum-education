@@ -3,6 +3,11 @@ import ContactFormComp from "@/lib/ContactFormComp";
 import Image from "next/image";
 import LOGO from "../../../assets/logo.png";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "FAQs - Quantum Institute" });
+}
+
 export default function FaqsPage() {
   return (
     <>

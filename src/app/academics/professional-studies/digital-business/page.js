@@ -1,6 +1,11 @@
 import ProfessionalStudiesComp from "@/lib/ProfessionalStudiesComp";
 import DIGITAL_BUSINESS_IMG from "../../.././../assets/academics/professional-studies/digital_business_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "DigitalBusiness - Quantum Institute" });
+}
+
 export default function DigitalBusinessPage() {
   return (
     <>

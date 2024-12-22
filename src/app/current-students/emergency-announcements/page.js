@@ -1,5 +1,10 @@
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "EmergencyAnnouncements - Quantum Institute" });
+}
+
 export default function EmergencyAnnouncementsPage() {
   return (
     <>

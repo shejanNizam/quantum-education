@@ -8,6 +8,11 @@ import {
   FaGraduationCap,
 } from "react-icons/fa";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "StudentPortal - Quantum Institute" });
+}
+
 const infoCards = [
   {
     title: "Course Access",

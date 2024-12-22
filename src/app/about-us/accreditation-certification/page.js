@@ -1,6 +1,13 @@
 import Image from "next/image";
 import ACCREDITATION_CERTIFICATION_IMAGE from "../../../assets/about_us/accreditation_certification_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({
+    title: "AccreditationCertification - Quantum Institute",
+  });
+}
+
 export default function AccreditationCertificationPage() {
   const accreditationCertification = [
     {

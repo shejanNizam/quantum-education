@@ -1,6 +1,11 @@
 import Image from "next/image";
 import NEWS_IMG from "../../../assets/news_events/news_img.jpg";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "PressRelease - Quantum Institute" });
+}
+
 export default function PressReleasePage() {
   return (
     <>

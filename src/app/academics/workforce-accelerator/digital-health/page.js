@@ -1,6 +1,11 @@
 import WorkforceAcceleratorComp from "@/lib/WorkforceAcceleratorComp";
 import DIGITAL_HEALTH_IMG from "../../../../assets/academics/workforce-accelerator/digital_health_img.webp";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "DigitalHealth - Quantum Institute" });
+}
+
 export default function DigitalHealthPage() {
   return (
     <>

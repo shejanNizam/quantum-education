@@ -3,6 +3,11 @@ import AcademicGraUndCalComp from "@/lib/AcademicGraUndCalComp";
 import ACADEMIC_CALENDAR_IMG1 from "../../../assets/academics/academic_calender/academic_calendar_img1.webp";
 import ACADEMIC_CALENDAR_IMG2 from "../../../assets/academics/academic_calender/academic_calendar_img2.jpg";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "AcademicCalendar - Quantum Institute" });
+}
+
 const sections = [
   {
     imageSrc: ACADEMIC_CALENDAR_IMG1,

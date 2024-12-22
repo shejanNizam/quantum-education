@@ -1,5 +1,10 @@
 import { FaEnvelope } from "react-icons/fa";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "TuitionFees - Quantum Institute" });
+}
+
 const tuitionOptions = [
   {
     id: 1,

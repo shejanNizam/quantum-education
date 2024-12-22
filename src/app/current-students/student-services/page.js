@@ -8,6 +8,11 @@ import {
   FaUsers,
 } from "react-icons/fa";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "StudentServices - Quantum Institute" });
+}
+
 const helpItems = [
   {
     title: "Academic Guidance",

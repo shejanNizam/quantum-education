@@ -1,5 +1,10 @@
 import { FaEnvelope } from "react-icons/fa";
 
+import { getMetadata } from "@/lib/utils";
+export async function generateMetadata() {
+  return getMetadata({ title: "CancellationRefundPolicy - Quantum Institute" });
+}
+
 export default function CancellationRefundPolicyPage() {
   return (
     <>
