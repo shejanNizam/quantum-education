@@ -1,20 +1,7 @@
 import Footer from "@/components/Footer";
 
 import Navbar from "@/components/Navbar";
-import localFont from "next/font/local";
 import "./globals.css";
-
-// Local Fonts
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata = {
   title: "Quantum Institute",
@@ -26,8 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-serif`}
-        style={{ fontFamily: "'Fraunces', serif" }}
+        className="antialiased font-sans bg-[#FAF4F1] "
+        style={{
+          fontFamily:
+            "ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        }}
       >
         <Navbar />
         {children}

@@ -37,7 +37,7 @@ export default function Navbar() {
       subMenu: [
         {
           href: "/about-us/message-founder",
-          label: "Message from the Founder and Chancellor",
+          label: "Message from the Founder",
         },
         {
           href: "/about-us/message-president",
