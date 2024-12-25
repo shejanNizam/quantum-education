@@ -28,6 +28,7 @@ export default function RegistrationForm() {
       className="py-24 bg-white text-center"
       initial="hidden"
       animate="visible"
+      whileHover={{ scale: 1.1 }}
       variants={containerVariants}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,8 +37,6 @@ export default function RegistrationForm() {
           variants={scrollVariants}
           initial="hidden"
           whileInView="visible"
-          whileHover={{ scale: 1.1 }}
-          viewport={{ once: true, amount: 0.8 }}
           className="text-center my-12"
         >
           <motion.h2
