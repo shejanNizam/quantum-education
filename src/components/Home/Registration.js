@@ -36,13 +36,14 @@ export default function RegistrationForm() {
           variants={scrollVariants}
           initial="hidden"
           whileInView="visible"
+          whileHover={{ scale: 1.1 }}
           viewport={{ once: true, amount: 0.8 }}
           className="text-center my-12"
         >
           <motion.h2
             variants={scrollVariants}
             className="text-6xl font-bold mb-4"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.1 }}
           >
             Register Now
           </motion.h2>

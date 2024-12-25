@@ -49,12 +49,14 @@ export default function QuantumUnique() {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
+      whileHover={{ scale: 1.1 }}
       viewport={{ once: true, amount: 0.2 }}
     >
       {/* Heading Section */}
       <motion.h2
-        className="text-center text-5xl font-bold mb-12 p-4"
+        className="text-center text-5xl font-bold mb-8 p-4"
         variants={itemVariants}
+        whileHover={{ scale: 1.1 }}
       >
         What Makes Quantum Unique?
       </motion.h2>

@@ -31,6 +31,7 @@ export default function Banner({ onApplyClick }) {
     <motion.div
       initial="hidden"
       animate="visible"
+      whileHover={{ scale: 1.1 }}
       className="relative w-full h-auto py-24 bg-center bg-cover text-center"
       style={{
         backgroundImage: `url(${BG_IMAGE.src})`, // Apply the background image
@@ -49,6 +50,7 @@ export default function Banner({ onApplyClick }) {
           variants={scrollVariants}
           initial="hidden"
           whileInView="visible"
+          whileHover={{ scale: 1.1 }}
           viewport={{ once: true, amount: 0.8 }}
           className="text-4xl md:text-6xl lg:text-6xl  font-bold text-white leading-tight mb-4"
         >

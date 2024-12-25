@@ -29,11 +29,13 @@ export default function Updates() {
         className="container my-32"
         initial="hidden"
         animate="visible"
+        whileHover={{ scale: 1.1 }}
         variants={containerVariants}
       >
         <motion.h2
           className="text-center text-6xl font-bold mb-12"
           variants={itemVariants}
+          whileHover={{ scale: 1.1 }}
         >
           Latest Updates
         </motion.h2>

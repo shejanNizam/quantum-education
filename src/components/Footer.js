@@ -55,6 +55,7 @@ export default function Footer() {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
+      whileHover={{ scale: 1.1 }}
       viewport={{ once: true, amount: 0.2 }}
     >
       {/* Footer Background Image */}
