@@ -4,7 +4,7 @@
 
 @layer components {
   .customButton {
-    @apply text-xl font-semibold border-2 border-[#34244c] text-[#34244c] hover:bg-[#34244c] hover:text-white px-6 py-2 rounded focus:outline-none;
+    @apply text-xl font-semibold border-2 bg-primary border-purple-800 text-white hover:bg-[#34244c] hover:text-white px-6 py-2 rounded focus:outline-none;
   }
 }
 

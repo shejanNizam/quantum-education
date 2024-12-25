@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { CgArrowTopRight } from "react-icons/cg";
@@ -6,12 +7,41 @@ import logo2 from "../../assets/updates/update_icon_2.png";
 import logo3 from "../../assets/updates/update_icon_3.png";
 
 export default function Updates() {
+  // Variants for animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     <>
-      <div className="container my-32">
-        <h2 className="text-center text-6xl font-bold mb-12">Latest Updates</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 md:px-12 lg:px-12">
-          <div>
+      <motion.div
+        className="container my-32"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.h2
+          className="text-center text-6xl font-bold mb-12"
+          variants={itemVariants}
+        >
+          Latest Updates
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 md:px-12 lg:px-12"
+          variants={containerVariants}
+        >
+          <motion.div variants={itemVariants}>
             <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
               <Image src={logo1} alt="logo1" width={50} height={50} />
               NEW PROGRAMS
@@ -26,8 +56,8 @@ export default function Updates() {
                 <Link href={"/"}> FinTech Workforce Accelerator </Link>
               </li>
             </ul>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={itemVariants}>
             <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
               <Image src={logo2} alt="logo1" width={50} height={50} />
               TOP PROGRAMS
@@ -46,22 +76,22 @@ export default function Updates() {
                 <Link href={"/"}> Executive Mentorship </Link>
               </li>
             </ul>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={itemVariants}>
             <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
               <Image src={logo3} alt="logo1" width={50} height={50} />
               MATERIALS
             </h3>
             <ul className="ml-14 font-semibold">
-              <p>
+              <motion.p variants={itemVariants}>
                 We offer an array of resources tailored exclusively for you,
                 encompassing documents, PowerPoint presentations, videos,
                 software, and certification preparation materials.
-              </p>
+              </motion.p>
             </ul>
-          </div>
-        </div>
-      </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
     </>
   );
 }
