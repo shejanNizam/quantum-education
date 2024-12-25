@@ -3,6 +3,7 @@
 import { FaBars, FaChevronDown, FaChevronRight, FaTimes } from "react-icons/fa";
 import LOGO from "../assets/logo.png";
 
+import CustomButtonComp from "@/lib/CustomButtonComp";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -138,6 +139,13 @@ export default function Navbar() {
       ],
     },
     //  news and media ok
+    {
+      href: "/partnership",
+      label: "Partnership",
+      subMenu: [
+        { href: "/partnership/hire-our-grads", label: "Hire our Grads" },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -179,7 +187,7 @@ export default function Navbar() {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center font-semibold py-2 px-4 rounded-md hover:bg-primary/10 focus:outline-none ${
+                className={`flex items-center font-semibold py-2  rounded-md hover:bg-primary/10 focus:outline-none ${
                   isScrolled ? "text-black" : "text-primary"
                 }`}
                 aria-haspopup="true"
@@ -253,7 +261,7 @@ export default function Navbar() {
           ))}
           {/* Contact Us Button for Desktop */}
           <Link href={`/contact`}>
-            <button className="customButton">Contact Us</button>
+            <CustomButtonComp> Free Career Consultation </CustomButtonComp>
           </Link>
         </div>
 
@@ -362,7 +370,10 @@ export default function Navbar() {
                   </div>
                 ))}
                 <Link href={`/contact`}>
-                  <button className="customButton mt-6">Contact Us</button>
+                  <CustomButtonComp>
+                    {" "}
+                    Free Career Consultation{" "}
+                  </CustomButtonComp>
                 </Link>
               </div>
             </div>
