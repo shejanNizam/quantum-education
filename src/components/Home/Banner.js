@@ -51,7 +51,7 @@ export default function Banner({ onApplyClick }) {
           whileInView="visible"
           whileHover={{ scale: 1.1 }}
           viewport={{ once: true, amount: 0.8 }}
-          className="text-4xl md:text-6xl lg:text-6xl  font-bold text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-4"
+          className="customHeading"
         >
           Kickstart Your Career with Expert Guidance
         </motion.h1>

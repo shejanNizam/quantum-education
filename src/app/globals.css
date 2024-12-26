@@ -4,7 +4,10 @@
 
 @layer components {
   .customButton {
-    @apply text-xl font-semibold border-2 bg-primary border-purple-800 text-white hover:bg-[#34244c] hover:text-white px-6 py-2 rounded focus:outline-none;
+    @apply text-xl font-semibold border-2 bg-gradient-to-r from-purple-800 to-pink-800 border-purple-800 text-white hover:bg-[#34244c] hover:text-white px-6 py-2 rounded focus:outline-none;
+  }
+  .customHeading {
+    @apply text-center text-4xl md:text-6xl lg:text-6xl font-bold text-transparent bg-gradient-to-r from-[#c6951c] to-purple-600 bg-clip-text mb-8;
   }
 }
 

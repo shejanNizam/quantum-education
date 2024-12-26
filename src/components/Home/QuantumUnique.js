@@ -53,7 +53,7 @@ export default function QuantumUnique() {
     >
       {/* Heading Section */}
       <motion.h2
-        className="text-center text-5xl font-bold mb-8 p-4"
+        className="customHeading"
         variants={itemVariants}
         whileHover={{ scale: 1.1 }}
       >

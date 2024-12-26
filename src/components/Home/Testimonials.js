@@ -74,7 +74,7 @@ export default function Testimonials() {
     >
       {/* Section Heading with Scroll Animation */}
       <motion.h2
-        className="text-5xl md:text-6xl lg:text-6xl text-center mb-12 font-bold"
+        className="customHeading"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         whileHover={{ scale: 1.1 }}
