@@ -43,7 +43,7 @@
 .animatedText {
   animation: stroke 5s infinite alternate;
   stroke-width: 2;
-  stroke: #7936a0;
+  stroke: #ffffff;
   font-size: 3rem; /* Adjust as needed */
   fill: rgba(72, 138, 204, 0); /* Initial fill transparent */
 }
@@ -52,22 +52,22 @@
 @keyframes stroke {
   0% {
     fill: rgba(72, 138, 204, 0);
-    stroke: rgb(154, 8, 199);
+    stroke: rgb(255, 255, 255);
     stroke-dashoffset: 25%;
     stroke-dasharray: 0 50%;
     stroke-width: 2;
   }
   70% {
     fill: rgba(72, 138, 204, 0);
-    stroke: rgb(154, 8, 199);
+    stroke: rgb(255, 255, 255);
   }
   80% {
     fill: rgba(72, 138, 204, 0);
-    stroke: rgb(154, 8, 199);
+    stroke: rgb(255, 255, 255);
     stroke-width: 3;
   }
   100% {
-    fill: rgb(154, 8, 199);
+    fill: rgb(255, 255, 255);
     stroke: rgba(54, 95, 160, 0);
     stroke-dashoffset: -25%;
     stroke-dasharray: 50% 0;
