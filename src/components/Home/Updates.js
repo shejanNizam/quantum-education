@@ -43,7 +43,7 @@ export default function Updates() {
           variants={containerVariants}
         >
           <motion.div variants={itemVariants}>
-            <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
+            <h3 className="customSubHeading flex items-center gap-2">
               <Image src={logo1} alt="logo1" width={50} height={50} />
               NEW PROGRAMS
             </h3>
@@ -59,7 +59,7 @@ export default function Updates() {
             </ul>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
+            <h3 className="customSubHeading flex items-center gap-2">
               <Image src={logo2} alt="logo1" width={50} height={50} />
               TOP PROGRAMS
             </h3>
@@ -79,7 +79,7 @@ export default function Updates() {
             </ul>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
+            <h3 className="customSubHeading flex items-center gap-2">
               <Image src={logo3} alt="logo1" width={50} height={50} />
               MATERIALS
             </h3>

@@ -69,7 +69,7 @@ export default function QuantumUnique() {
         <motion.div className="p-4" variants={containerVariants}>
           {/* Feature 1 */}
           <motion.div className="mb-8" variants={itemVariants}>
-            <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
+            <h3 className="customSubHeading flex items-center gap-2">
               <Image
                 src={logo1}
                 alt="Dynamic Curriculum"
@@ -86,7 +86,7 @@ export default function QuantumUnique() {
 
           {/* Feature 2 */}
           <motion.div className="mb-8" variants={itemVariants}>
-            <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
+            <h3 className="customSubHeading flex items-center gap-2">
               <Image
                 src={logo2}
                 alt="Real-World Projects"
@@ -103,7 +103,7 @@ export default function QuantumUnique() {
 
           {/* Feature 3 */}
           <motion.div className="mb-8" variants={itemVariants}>
-            <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
+            <h3 className="customSubHeading flex items-center gap-2">
               <Image src={logo3} alt="Career Support" width={40} height={40} />
               Career Support
             </h3>
@@ -115,7 +115,7 @@ export default function QuantumUnique() {
 
           {/* Feature 4 */}
           <motion.div className="mb-8" variants={itemVariants}>
-            <h3 className="text-3xl font-bold flex items-center gap-2 mb-4">
+            <h3 className="customSubHeading flex items-center gap-2">
               <Image src={logo4} alt="Outcomes First" width={40} height={40} />
               Outcomes First
             </h3>

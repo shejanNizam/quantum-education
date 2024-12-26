@@ -6,7 +6,7 @@ import FOOTER_IMG from "../assets/logo_bg.png";
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaPhone, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   // Variants for the overall container
@@ -72,14 +72,11 @@ export default function Footer() {
           variants={containerVariants}
         >
           {/* Logo and Address Section */}
-          <motion.div variants={sectionVariants} className="">
-            <Link
-              className="flex items-center justify-start lg:justify-start pb-4 lg:pb-1"
-              href="/"
-            >
+          <motion.div variants={sectionVariants}>
+            <Link className="flex items-center justify-start " href="/">
               <Image src={LOGO} alt="Quantum Logo" width={60} height={60} />
               <motion.h2
-                className="text-2xl lg:text-3xl text-primary font-semibold gap-2"
+                className="customSubHeading"
                 variants={sectionVariants}
               >
                 Quantum
@@ -89,14 +86,24 @@ export default function Footer() {
               3100 Clarendon Blvd #200
             </motion.p>
             <motion.p variants={sectionVariants}>
-              Arlington, Virginia 22201
+              Arlington, Virginia 22201, United States
             </motion.p>
-            <motion.p variants={sectionVariants}>
-              United States, (801) 889-3468
-            </motion.p>
+            {/* Updated Phone Section */}
+            <motion.div
+              variants={sectionVariants}
+              aria-label="Contact Phone Number"
+            >
+              <a
+                href="tel:+18018893468"
+                className="flex items-center gap-2 text-lg hover:text-primary transition-colors duration-300"
+              >
+                <FaPhone className="text-xl" aria-hidden="true" />
+                (801) 889-3468
+              </a>
+            </motion.div>
 
             <motion.div
-              className="flex justify-start lg:justify-start space-x-6 pt-4"
+              className="flex justify-start space-x-6 pt-4"
               variants={sectionVariants}
             >
               {/* Social Media Icons */}
@@ -111,7 +118,7 @@ export default function Footer() {
                 whileHover="hover"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <FaFacebook className="w-6 h-6" />
+                <FaFacebook className="w-10 h-10" />
               </motion.a>
               <motion.a
                 href="https://twitter.com"
@@ -124,7 +131,7 @@ export default function Footer() {
                 whileHover="hover"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <FaTwitter className="w-6 h-6" />
+                <FaTwitter className="w-10 h-10" />
               </motion.a>
               <motion.a
                 href="https://instagram.com"
@@ -137,18 +144,15 @@ export default function Footer() {
                 whileHover="hover"
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <FaInstagram className="w-6 h-6" />
+                <FaInstagram className="w-10 h-10" />
               </motion.a>
             </motion.div>
           </motion.div>
 
           {/* Business Hours Section */}
-          <motion.div variants={sectionVariants} className="">
-            <motion.h2
-              className="text-xl lg:text-2xl font-bold"
-              variants={sectionVariants}
-            >
-              Business Hours:
+          <motion.div variants={sectionVariants}>
+            <motion.h2 className="customSubHeading" variants={sectionVariants}>
+              Business Hours
             </motion.h2>
             <motion.h6
               className="font-semibold text-lg lg:text-xl text-[#9B7B74]"
@@ -169,12 +173,9 @@ export default function Footer() {
           </motion.div>
 
           {/* Sessions Section */}
-          <motion.div variants={sectionVariants} className="">
-            <motion.h2
-              className="text-xl lg:text-2xl font-bold"
-              variants={sectionVariants}
-            >
-              Sessions:
+          <motion.div variants={sectionVariants}>
+            <motion.h2 className="customSubHeading" variants={sectionVariants}>
+              Sessions
             </motion.h2>
             <motion.h6
               className="font-semibold text-lg lg:text-xl text-[#9B7B74]"

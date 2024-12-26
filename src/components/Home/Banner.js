@@ -83,7 +83,8 @@ export default function Banner({ onApplyClick }) {
           <br />
           <br />
           Experience the fusion of academia and industry firsthand. Secure your
-          spot on our <br /> waiting list for the Summer Semester of 2024.
+          spot on our <br /> waiting list for the{" "}
+          {`Summer Semester of ${new Date().getFullYear()}`}.
         </motion.p>
 
         {/* Buttons */}
