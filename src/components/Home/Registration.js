@@ -49,9 +49,8 @@ export default function RegistrationForm() {
             variants={scrollVariants}
             className="p-4 md:p-0 lg:p-0 text-lg text-gray-600"
           >
-            It’s never too late to start a new career
+            It’s never too late to start a new career. Countdown is finished!
             <br />
-            Countdown is finished!
             <br />
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. <br /> Lorem Ipsum has been the industrys standard dummy
