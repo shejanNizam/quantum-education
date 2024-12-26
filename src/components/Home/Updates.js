@@ -29,7 +29,6 @@ export default function Updates() {
         className="container my-32"
         initial="hidden"
         animate="visible"
-        whileHover={{ scale: 1.1 }}
         variants={containerVariants}
       >
         <motion.h2

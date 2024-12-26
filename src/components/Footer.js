@@ -55,7 +55,6 @@ export default function Footer() {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      whileHover={{ scale: 1.1 }}
       viewport={{ once: true, amount: 0.2 }}
     >
       {/* Footer Background Image */}
@@ -82,7 +81,6 @@ export default function Footer() {
               <motion.h2
                 className="text-2xl lg:text-3xl text-primary font-semibold gap-2"
                 variants={sectionVariants}
-                whileHover={{ scale: 1.05 }}
               >
                 Quantum
               </motion.h2>

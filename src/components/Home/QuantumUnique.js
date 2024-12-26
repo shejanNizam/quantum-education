@@ -49,7 +49,6 @@ export default function QuantumUnique() {
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
-      whileHover={{ scale: 1.1 }}
       viewport={{ once: true, amount: 0.2 }}
     >
       {/* Heading Section */}

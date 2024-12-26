@@ -28,7 +28,6 @@ export default function RegistrationForm() {
       className="py-24 bg-white text-center"
       initial="hidden"
       animate="visible"
-      whileHover={{ scale: 1.1 }}
       variants={containerVariants}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,8 +54,8 @@ export default function RegistrationForm() {
             Countdown is finished!
             <br />
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industrys standard dummy text
-            ever since the 1500s.
+            industry. <br /> Lorem Ipsum has been the industrys standard dummy
+            text ever since the 1500s.
           </motion.p>
         </motion.div>
 
@@ -65,7 +64,7 @@ export default function RegistrationForm() {
           variants={scrollVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="iframe-container"
           style={{
             backgroundColor: "#FFFFFF",
@@ -76,10 +75,10 @@ export default function RegistrationForm() {
             maxWidth: "850px",
             width: "100%",
             margin: "0 auto",
-            overflow: "hidden", // Ensures rounded corners apply to iframe
+            // overflow: "hidden", // Ensures rounded corners apply to iframe
           }}
           whileHover={{
-            scale: 1.02,
+            scale: 1.01,
             boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)",
           }}
         >
@@ -90,8 +89,8 @@ export default function RegistrationForm() {
             style={{
               border: "0",
               width: "100%",
-              height: "800px", // Adjust height as needed
-              backgroundColor: "#FAF4F1",
+              height: "900px", // Adjust height as needed
+
               borderRadius: "12px",
             }}
             loading="lazy" // Improves performance by lazy loading the iframe

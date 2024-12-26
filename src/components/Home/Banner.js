@@ -31,7 +31,6 @@ export default function Banner({ onApplyClick }) {
     <motion.div
       initial="hidden"
       animate="visible"
-      whileHover={{ scale: 1.1 }}
       className="relative w-full h-auto py-24 bg-center bg-cover text-center"
       style={{
         backgroundImage: `url(${BG_IMAGE.src})`, // Apply the background image
@@ -52,7 +51,7 @@ export default function Banner({ onApplyClick }) {
           whileInView="visible"
           whileHover={{ scale: 1.1 }}
           viewport={{ once: true, amount: 0.8 }}
-          className="text-4xl md:text-6xl lg:text-6xl  font-bold text-white leading-tight mb-4"
+          className="text-4xl md:text-6xl lg:text-6xl  font-bold text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text mb-4"
         >
           Kickstart Your Career with Expert Guidance
         </motion.h1>
@@ -82,7 +81,7 @@ export default function Banner({ onApplyClick }) {
             className="flex"
           >
             <motion.div
-              whileHover={{ scale: 1.2, rotate: 2 }}
+              whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 0.9 }}
               className="cursor-pointer"
               onClick={onApplyClick}
@@ -100,7 +99,7 @@ export default function Banner({ onApplyClick }) {
             className="flex"
           >
             <motion.div
-              whileHover={{ scale: 1.2, rotate: -2 }}
+              whileHover={{ scale: 1.05, rotate: -2 }}
               whileTap={{ scale: 0.9 }}
               className="cursor-pointer"
             >

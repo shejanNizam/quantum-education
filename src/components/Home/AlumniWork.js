@@ -60,13 +60,13 @@ export default function AlumniWork() {
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      whileHover={{ scale: 1.1 }}
       viewport={{ once: true, amount: 0.2 }}
     >
       {/* Section Heading with Scroll Animation */}
       <motion.h2
         className="text-6xl text-center mb-12 font-bold"
         variants={sectionVariants}
+        whileHover={{ scale: 1.1 }}
       >
         Where Our Alumni Work
       </motion.h2>

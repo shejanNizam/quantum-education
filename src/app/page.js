@@ -4,6 +4,7 @@ import AlumniWork from "@/components/Home/AlumniWork";
 import Banner from "@/components/Home/Banner";
 import QuantumUnique from "@/components/Home/QuantumUnique";
 import Registration from "@/components/Home/Registration";
+import Test from "@/components/Home/Test";
 import Testimonials from "@/components/Home/Testimonials";
 import Updates from "@/components/Home/Updates";
 import { useRef } from "react";
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Banner onApplyClick={handleScrollToRegistration} />
+      {/* <Test /> */}
       <Updates />
       <QuantumUnique />
       <Testimonials />

@@ -68,7 +68,6 @@ export default function Testimonials() {
     <motion.section
       className="container py-16"
       initial={{ opacity: 0, y: 50 }}
-      whileHover={{ scale: 1.1 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -78,6 +77,7 @@ export default function Testimonials() {
         className="text-5xl md:text-6xl lg:text-6xl text-center mb-12 font-bold"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.1 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
