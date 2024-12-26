@@ -21,28 +21,28 @@ export default function Testimonials() {
       image: image1,
       name: "STUDENT NAME",
       description:
-        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend. Bright Path is much more different than your traditional college, in the sense that a college will make you pay such high tuition fees for only a small fraction of what someone needs to know going into IT. I have been in the course for a couple months and I can easily say that I've learned so much in the little time I've been here.",
+        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend.",
     },
     {
       _id: 2,
       image: image2,
       name: "STUDENT NAME",
       description:
-        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend. Bright Path is much more different than your traditional college, in the sense that a college will make you pay such high tuition fees for only a small fraction of what someone needs to know going into IT. I have been in the course for a couple months and I can easily say that I've learned so much in the little time I've been here.",
+        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend.",
     },
     {
       _id: 3,
       image: image3,
       name: "STUDENT NAME",
       description:
-        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend. Bright Path is much more different than your traditional college, in the sense that a college will make you pay such high tuition fees for only a small fraction of what someone needs to know going into IT. I have been in the course for a couple months and I can easily say that I've learned so much in the little time I've been here.",
+        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend.",
     },
     {
       _id: 4,
       image: image4,
       name: "STUDENT NAME",
       description:
-        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend. Bright Path is much more different than your traditional college, in the sense that a college will make you pay such high tuition fees for only a small fraction of what someone needs to know going into IT. I have been in the course for a couple months and I can easily say that I've learned so much in the little time I've been here.",
+        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend.",
     },
   ];
 
@@ -88,7 +88,6 @@ export default function Testimonials() {
       <Swiper
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
-        navigation={true}
         modules={[Autoplay, Navigation, Pagination]}
         className="relative"
         slidesPerView={1}
@@ -115,12 +114,12 @@ export default function Testimonials() {
                 variants={hoverVariants}
                 whileHover="hover"
               >
-                <Card className="w-full">
-                  <CardContent className="bg-white rounded flex flex-col items-center text-center p-4">
+                <Card className="w-full h-full ">
+                  <CardContent className="bg-white rounded-2xl flex flex-col items-center text-center p-4">
                     <Image
                       className="rounded-full mb-6"
-                      width={100}
-                      height={100}
+                      width={80}
+                      height={80}
                       src={image}
                       alt={`${name} testimonial`}
                       quality={100}

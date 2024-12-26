@@ -75,7 +75,6 @@ export default function AlumniWork() {
       <Swiper
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
-        navigation={true}
         modules={[Autoplay, Navigation, Pagination]}
         className="relative"
         slidesPerView={1}

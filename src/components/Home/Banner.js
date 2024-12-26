@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Russo_One } from "next/font/google";
 import Link from "next/link";
 import { CgArrowTopRight } from "react-icons/cg";
-import BG_IMAGE from "../../assets/banner_img/bg-banner1.png"; // Import the background image
+import BG_IMAGE from "../../assets/banner_img/bg_banner.png"; // Import the background image
 import styles from "./Banner.module.css"; // Import the CSS module
 
 const russoOne = Russo_One({
@@ -36,7 +36,7 @@ export default function Banner({ onApplyClick }) {
 
   return (
     <motion.div
-      initial="hidden"
+      initial={initialVariants}
       animate="visible"
       className={styles.wrapper}
       style={{
@@ -78,11 +78,12 @@ export default function Banner({ onApplyClick }) {
           viewport={{ once: true, amount: 0.8 }}
           className="text-lg md:text-xl text-gray-200 mb-8 customHeading" // Tailwind classes for paragraph
         >
-          Discover an affordable, fast-track path to professional success at our
-          accelerated higher-learning institution.
+          Discover an affordable, fast-track path to professional success at our{" "}
+          <br /> accelerated higher-learning institution.
+          <br />
           <br />
           Experience the fusion of academia and industry firsthand. Secure your
-          spot on our waiting list for the Summer Semester of 2024.
+          spot on our <br /> waiting list for the Summer Semester of 2024.
         </motion.p>
 
         {/* Buttons */}
