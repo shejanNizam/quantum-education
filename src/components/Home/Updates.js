@@ -26,7 +26,7 @@ export default function Updates() {
   return (
     <>
       <motion.div
-        className="container my-32"
+        className="container my-20"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
