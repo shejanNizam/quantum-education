@@ -65,7 +65,6 @@ export default function Banner({ onApplyClick }) {
             textAnchor="middle"
             dominantBaseline="middle"
             className={`${styles.animatedText}`}
-            aria-label="Kickstart Your Career with Experts"
           >
             Kickstart Your Career with Experts
           </text>
@@ -77,7 +76,7 @@ export default function Banner({ onApplyClick }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.8 }}
-          className="text-lg md:text-xl text-gray-200 mb-8" // Tailwind classes for paragraph
+          className="text-lg md:text-xl text-gray-200 mb-8 customHeading" // Tailwind classes for paragraph
         >
           Discover an affordable, fast-track path to professional success at our
           accelerated higher-learning institution.
