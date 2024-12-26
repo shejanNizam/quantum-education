@@ -1,0 +1,88 @@
+/* components/Home/Banner.module.css */
+
+/* Removed the @import statement for the font */
+
+/* Wrapper styling to ensure proper positioning */
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-top: 6rem; /* Equivalent to py-24 */
+  padding-bottom: 6rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+/* Semi-transparent overlay for better text readability */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* Equivalent to bg-black opacity-20 */
+  z-index: 10;
+}
+
+/* Container to hold content above the overlay */
+.content {
+  position: relative;
+  z-index: 20;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 auto; /* Equivalent to px-4 */
+}
+
+/* Styling for the SVG */
+.animatedSvg {
+  /* Removed font-family as it's now handled by next/font */
+  width: 100%;
+  height: auto;
+}
+
+/* Styling for the animated text within SVG */
+.animatedText {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #7936a0;
+  font-size: 3rem; /* Adjust as needed */
+  fill: rgba(72, 138, 204, 0); /* Initial fill transparent */
+}
+
+/* Keyframes for the stroke animation */
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgb(154, 8, 199);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgb(154, 8, 199);
+  }
+  80% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgb(154, 8, 199);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgb(154, 8, 199);
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+/* Responsive font size adjustments */
+@media (max-width: 768px) {
+  .animatedText {
+    font-size: 3rem; /* Adjust for smaller screens */
+  }
+}
+@media (max-width: 300px) {
+  .animatedText {
+    font-size: 3rem; /* Adjust for smaller screens */
+  }
+}

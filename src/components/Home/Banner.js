@@ -2,9 +2,16 @@
 
 import CustomButtonComp from "@/lib/CustomButtonComp";
 import { motion } from "framer-motion";
+import { Russo_One } from "next/font/google";
 import Link from "next/link";
 import { CgArrowTopRight } from "react-icons/cg";
 import BG_IMAGE from "../../assets/banner_img/bg-banner1.png"; // Import the background image
+import styles from "./Banner.module.css"; // Import the CSS module
+
+const russoOne = Russo_One({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export default function Banner({ onApplyClick }) {
   // Variants for initial load animations
@@ -31,30 +38,38 @@ export default function Banner({ onApplyClick }) {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="relative w-full h-auto py-24 bg-center bg-cover text-center"
+      className={styles.wrapper}
       style={{
         backgroundImage: `url(${BG_IMAGE.src})`, // Apply the background image
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Optional: Add a semi-transparent overlay for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-20"></div>
+      {/* Semi-transparent overlay */}
+      <div className={styles.overlay}></div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Heading with scroll animation */}
-
-        <motion.h1
+      {/* Content Container */}
+      <div className={styles.content}>
+        {/* Animated SVG Heading */}
+        <motion.svg
           variants={scrollVariants}
           initial="hidden"
           whileInView="visible"
           whileHover={{ scale: 1.1 }}
           viewport={{ once: true, amount: 0.8 }}
-          className="customHeading"
+          className={`${styles.animatedSvg} ${russoOne.className}`} // Apply the font class here
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1000 150" // Adjust viewBox as needed
         >
-          Kickstart Your Career with Expert Guidance
-        </motion.h1>
+          <text
+            x="50%"
+            y="50%"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            className={`${styles.animatedText}`}
+            aria-label="Kickstart Your Career with Experts"
+          >
+            Kickstart Your Career with Experts
+          </text>
+        </motion.svg>
 
         {/* Paragraph with scroll animation */}
         <motion.p
@@ -62,7 +77,7 @@ export default function Banner({ onApplyClick }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.8 }}
-          className="text-lg md:text-xl text-gray-200 mb-8" // Changed text color for better contrast
+          className="text-lg md:text-xl text-gray-200 mb-8" // Tailwind classes for paragraph
         >
           Discover an affordable, fast-track path to professional success at our
           accelerated higher-learning institution.
@@ -71,6 +86,7 @@ export default function Banner({ onApplyClick }) {
           spot on our waiting list for the Summer Semester of 2024.
         </motion.p>
 
+        {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 my-8 justify-center">
           {/* Enroll Now Button with scroll animation */}
           <motion.div
@@ -120,7 +136,7 @@ export default function Banner({ onApplyClick }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.8 }}
-          className="text-sm text-gray-200 mt-6" // Changed text color for better contrast
+          className="text-sm text-gray-200 mt-6" // Tailwind classes for text
         >
           Sponsored by:{" "}
           <span className="font-semibold">Your Sponsors Here</span>
