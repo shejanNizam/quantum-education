@@ -167,9 +167,9 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex justify-between items-center px-4">
         {/* Logo */}
-        <div className="text-2xl font-semibold">
+        <div>
           <Link href={`/`}>
-            <Image src={LOGO} alt="logo" width={100} height={100} />
+            <Image src={LOGO} alt="logo" width={120} height={120} />
           </Link>
         </div>
 
