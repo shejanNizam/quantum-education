@@ -41,7 +41,7 @@
 
 /* Styling for the animated text within SVG */
 .animatedText {
-  animation: stroke 5s infinite alternate;
+  animation: stroke 12s infinite alternate;
   stroke-width: 2;
   stroke: #ffffff;
   font-size: 3rem; /* Adjust as needed */
@@ -75,14 +75,37 @@
   }
 }
 
-/* Responsive font size adjustments */
-@media (max-width: 768px) {
+/* Extra Small Devices (Portrait Phones, <576px) */
+@media (max-width: 575.98px) {
   .animatedText {
-    font-size: 3rem; /* Adjust for smaller screens */
+    font-size: 2.5rem; /* Adjust for very small screens */
   }
 }
-@media (max-width: 300px) {
+
+/* Small Devices (Landscape Phones, ≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
   .animatedText {
-    font-size: 3rem; /* Adjust for smaller screens */
+    font-size: 3rem; /* Adjust for small screens */
+  }
+}
+
+/* Medium Devices (Tablets, ≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .animatedText {
+    font-size: 3.5rem; /* Adjust for medium screens */
+  }
+}
+
+/* Large Devices (Desktops, ≥992px and <1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .animatedText {
+    font-size: 3.5rem; /* Adjust for large screens */
+  }
+}
+
+/* Extra Large Devices (Large Desktops, ≥1200px) */
+@media (min-width: 1200px) {
+  .animatedText {
+    font-size: 3.5rem; /* Default font size for extra large screens */
   }
 }

@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { Russo_One } from "next/font/google";
 import Link from "next/link";
 import { CgArrowTopRight } from "react-icons/cg";
-import BG_IMAGE from "../../assets/banner_img/bg_banner.png"; // Import the background image
-import styles from "./Banner.module.css"; // Import the CSS module
+import BG_IMAGE from "../../assets/banner_img/bg_banner.png";
+import styles from "./Banner.module.css";
 
 const russoOne = Russo_One({
   subsets: ["latin"],
@@ -40,7 +40,7 @@ export default function Banner({ onApplyClick }) {
       animate="visible"
       className={styles.wrapper}
       style={{
-        backgroundImage: `url(${BG_IMAGE.src})`, // Apply the background image
+        backgroundImage: `url(${BG_IMAGE.src})`,
       }}
     >
       {/* Semi-transparent overlay */}
@@ -54,7 +54,7 @@ export default function Banner({ onApplyClick }) {
           initial="hidden"
           whileInView="visible"
           whileHover={{ scale: 1.1 }}
-          viewport={{ once: true, amount: 0.8 }}
+          viewport={{ once: true, amount: 1 }}
           className={`${styles.animatedSvg} ${russoOne.className}`} // Apply the font class here
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1000 150" // Adjust viewBox as needed
