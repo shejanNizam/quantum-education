@@ -9,7 +9,7 @@ export default function FacultyMembersPage() {
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <div className="max-w-6xl ">
           {/* Heading */}
-          <h1 className="text-6xl font-bold mb-12">
+          <h1 className="customHeading mb-12">
             Meet Our Esteemed Faculty Members
           </h1>
 

@@ -32,7 +32,7 @@ export default function Updates() {
         variants={containerVariants}
       >
         <motion.h2
-          className="customHeading"
+          className="customHeading text-center"
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
         >

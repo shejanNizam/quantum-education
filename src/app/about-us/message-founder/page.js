@@ -10,7 +10,7 @@ export default function MessageFounderPage() {
   return (
     <>
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
-        <h2 className="font-bold text-2xl">
+        <h2 className="customSubHeading">
           About | Message from the founder and chancellor
         </h2>
         <div className="flex justify-center">

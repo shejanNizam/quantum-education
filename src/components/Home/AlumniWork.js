@@ -64,7 +64,7 @@ export default function AlumniWork() {
     >
       {/* Section Heading with Scroll Animation */}
       <motion.h2
-        className="customHeading"
+        className="customHeading text-center"
         variants={sectionVariants}
         whileHover={{ scale: 1.1 }}
       >

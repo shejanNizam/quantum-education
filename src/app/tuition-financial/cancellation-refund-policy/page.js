@@ -1,7 +1,5 @@
-import { FaEnvelope } from "react-icons/fa";
-
-import { getMetadata } from "@/lib/utils";
 import ContactUsComp from "@/lib/ContactUsComp";
+import { getMetadata } from "@/lib/utils";
 export async function generateMetadata() {
   return getMetadata({ title: "CancellationRefundPolicy - Quantum Institute" });
 }
@@ -13,7 +11,7 @@ export default function CancellationRefundPolicyPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left Section */}
           <div>
-            <h1 className="text-4xl font-bold text-gray-800 mb-6">
+            <h1 className="customHeading mb-6">
               Cancellation and Refund Policy
             </h1>
             <p className="text-gray-600 leading-relaxed">
@@ -26,9 +24,7 @@ export default function CancellationRefundPolicyPage() {
 
           {/* Right Section */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Full Refund Policy
-            </h2>
+            <h2 className="customSubHeading mb-4">Full Refund Policy</h2>
             <p className="text-gray-600 leading-relaxed">
               We offer a full refund policy to address any unforeseen
               circumstances or changes in your educational plans.

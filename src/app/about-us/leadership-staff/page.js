@@ -77,7 +77,7 @@ export default function LeadershipStaffPage() {
   return (
     <>
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
-        <h2 className="font-bold text-2xl"> Leadership and Staff </h2>
+        <h2 className="customSubHeading"> Leadership and Staff </h2>
         <br />
         <p>
           At Quantum Institute of Science and Technology, our dynamic leadership

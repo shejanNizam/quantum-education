@@ -43,7 +43,7 @@ export default function AlumniAssociationPage() {
           />
         </div>
         <div className="mt-4">
-          <h3 className="text-4xl font-bold">Building Success Together</h3>
+          <h3 className="customSubHeading">Building Success Together</h3>
           <p className="mb-8">
             At Quantum Institute of Science and Technology, we consider our
             community to be one big family. We understand that networking is
@@ -67,7 +67,7 @@ export default function AlumniAssociationPage() {
           ))}
         </div>
 
-        <h3 className="text-4xl font-bold">
+        <h3 className="customSubHeading">
           Stay Connected Through Your Secure Portal
         </h3>
         <p className="mb-8">
@@ -78,7 +78,7 @@ export default function AlumniAssociationPage() {
         </p>
         <div className=" flex flex-col lg:flex-row w-full gap-12">
           <div className=" w-[70%]">
-            <h3 className="text-4xl font-bold">Contact us</h3>
+            <h3 className="customSubHeading">Contact us</h3>
             <p>
               For all other inquiries or to learn more about our Alumni
               Association, please don’t hesitate to reach out to us{" "}

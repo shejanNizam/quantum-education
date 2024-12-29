@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <>
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
-        <div className="text-6xl font-bold"> Contact Us </div>
+        <div className="customHeading"> Contact Us </div>
         <div className="flex justify-center">
           <Image src={CONTACT_IMAGE} alt="CONTACT_IMAGE" />
         </div>
@@ -23,11 +23,11 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 bg-gray-50 my-12">
           {/* Address Section */}
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 flex items-center justify-center bg-gray-400 text-white rounded-full">
+            <div className="w-16 h-16 flex items-center justify-center bg-primary/80 hover:bg-primary text-white rounded-3xl">
               <FaMapMarkerAlt className="text-2xl" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">Address</h3>
+              <h3 className="customSubHeading">Address</h3>
               <p className="text-sm text-gray-600">
                 3100 Clarendon Blvd, #200 Arlington, VA
               </p>
@@ -36,22 +36,22 @@ export default function ContactPage() {
 
           {/* Email Section */}
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 flex items-center justify-center bg-gray-400 text-white rounded-full">
+            <div className="w-16 h-16 flex items-center justify-center bg-primary/80 hover:bg-primary text-white rounded-3xl">
               <FaEnvelope className="text-2xl" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">Email us</h3>
+              <h3 className="customSubHeading">Email us</h3>
               <p className="text-sm text-gray-600">info@qust.education</p>
             </div>
           </div>
 
           {/* Phone Section */}
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 flex items-center justify-center bg-gray-400 text-white rounded-full">
+            <div className="w-16 h-16 flex items-center justify-center bg-primary/80 hover:bg-primary text-white rounded-3xl">
               <FaPhone className="text-2xl" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">Call us</h3>
+              <h3 className="customSubHeading">Call us</h3>
               <p className="text-sm text-gray-600">801-889-3468</p>
             </div>
           </div>

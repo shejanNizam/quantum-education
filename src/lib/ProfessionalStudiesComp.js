@@ -48,7 +48,7 @@ export default function ProfessionalStudiesComp({
   return (
     <>
       <div>
-        <h1 className="text-6xl font-bold mb-8"> {heading} </h1>
+        <h1 className="customHeading mb-8"> {heading} </h1>
         <p className="mb-8"> {description} </p>
         <Image src={image} alt="image" />
         <>

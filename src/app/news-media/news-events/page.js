@@ -13,9 +13,7 @@ export default function NewsEventsPage() {
         <div className="max-w-7xl mx-auto space-y-8">
           {/* Main Heading Section */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Stay Informed with Quantum
-            </h1>
+            <h1 className="customHeading mb-4">Stay Informed with Quantum</h1>
             <p className="text-gray-600 leading-relaxed">
               While there are currently no events or news to report on our
               website, we want to keep you well-informed about everything
@@ -25,9 +23,7 @@ export default function NewsEventsPage() {
 
           {/* Subheading Section */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              Access Events and News:
-            </h2>
+            <h2 className="customSubHeading mb-4">Access Events and News:</h2>
             <p className="text-gray-600 leading-relaxed">
               Currently, there are no press release announcements to report.
               However, this page serves as your primary source for staying

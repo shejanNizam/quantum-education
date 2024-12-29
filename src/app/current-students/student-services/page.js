@@ -59,7 +59,7 @@ export default function StudentServicesPage() {
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Heading */}
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
+          <h1 className="customSubHeading">
             Welcome to Quantums Student Services Hub!
           </h1>
 
@@ -75,9 +75,7 @@ export default function StudentServicesPage() {
         {/*  */}
         <div className="max-w-7xl mx-auto my-12">
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            How We Can Help
-          </h2>
+          <h2 className="customSubHeading mb-4">How We Can Help</h2>
 
           {/* Help Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

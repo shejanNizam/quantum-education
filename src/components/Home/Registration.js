@@ -40,7 +40,7 @@ export default function RegistrationForm() {
         >
           <motion.h2
             variants={scrollVariants}
-            className="customHeading"
+            className="customHeading text-center"
             whileHover={{ scale: 1.1 }}
           >
             Register Now

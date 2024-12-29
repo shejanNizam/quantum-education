@@ -61,7 +61,7 @@ export default function TuitionFeesPage() {
     <>
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <div>
-          <h1 className="text-6xl font-bold my-4">
+          <h1 className="customHeading my-4">
             Explore Tuition and Fees at Quantum
           </h1>
           <p className=" font-bold">
@@ -81,9 +81,7 @@ export default function TuitionFeesPage() {
               <h3 className="text-xl font-bold text-gray-800 mb-2">
                 {option.title}
               </h3>
-              <h4 className="text-2xl font-bold text-gray-800 mb-4">
-                {option.heading}
-              </h4>
+              <h4 className="customSubHeading mb-4">{option.heading}</h4>
               <p className="text-gray-600 whitespace-pre-line leading-relaxed">
                 {option.description}
               </p>

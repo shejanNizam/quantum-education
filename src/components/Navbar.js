@@ -100,12 +100,12 @@ export default function Navbar() {
       ],
     },
     {
-      href: "/tution-financial",
+      href: "/tuition-financial",
       label: "Tuition & Financial Aid",
       subMenu: [
-        { href: "/tution-financial/tuition-fees", label: "Tuition and Fees" },
+        { href: "/tuition-financial/tuition-fees", label: "Tuition and Fees" },
         {
-          href: "/tution-financial/cancellation-refund-policy",
+          href: "/tuition-financial/cancellation-refund-policy",
           label: "Cancellation & Refund Policy",
         },
       ],

@@ -10,9 +10,7 @@ export default function MessagePresidentPage() {
   return (
     <>
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
-        <h2 className="font-bold text-2xl">
-          About | Message from the President
-        </h2>
+        <h2 className="customSubHeading">About | Message from the President</h2>
         <div className="flex justify-center">
           <Image src={PRESIDENT_IMAGE} alt="PRESIDENT_IMAGE" />
         </div>

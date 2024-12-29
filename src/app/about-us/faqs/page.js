@@ -18,13 +18,11 @@ export default function FaqsPage() {
             alt="logo"
             className="w-32 h-32 md:w-32 md:h-32 lg:w-40 lg:h-40"
           />
-          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-center md:text-left">
-            Frequently Asked Questions
-          </h1>
+          <h1 className="customHeading">Frequently Asked Questions</h1>
         </div>
 
         <div className="mt-12">
-          <h3 className="text-4xl font-semibold">
+          <h3 className="customSubHeading">
             About Quantum Institute of Science and Technology
           </h3>
           <p>

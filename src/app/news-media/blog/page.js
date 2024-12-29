@@ -1,7 +1,5 @@
-import { FaEnvelope } from "react-icons/fa";
-
-import { getMetadata } from "@/lib/utils";
 import ContactUsComp from "@/lib/ContactUsComp";
+import { getMetadata } from "@/lib/utils";
 export async function generateMetadata() {
   return getMetadata({ title: "Blog - Quantum Institute" });
 }
@@ -14,7 +12,7 @@ export default function BlogPage() {
           {/* Main Heading Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+              <h1 className="customHeading mb-4">
                 Stay Connected with Quantum
               </h1>
               <p className="text-gray-600 leading-relaxed">
@@ -35,7 +33,7 @@ export default function BlogPage() {
           {/* Grid Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="customSubHeading mb-4">
                 Follow Us on Social Media
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -49,7 +47,7 @@ export default function BlogPage() {
               </p>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="customSubHeading mb-4">
                 Explore Our Website Resources
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -65,7 +63,7 @@ export default function BlogPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="customSubHeading mb-4">
                 Access Our Secure Portal
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -77,7 +75,7 @@ export default function BlogPage() {
               </p>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="customSubHeading mb-4">
                 Stay Engaged, Stay Informed
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -89,7 +87,7 @@ export default function BlogPage() {
             </div>
           </div>
         </div>
-        {/*  */}
+
         {/* contact */}
         <ContactUsComp heading={"Questions or Concerns"} />
       </div>

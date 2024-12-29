@@ -14,7 +14,7 @@ export default function PressReleasePage() {
           {/* Header Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              <h1 className="customSubHeading mb-4">
                 Welcome to Quantums Press Release Page
               </h1>
               <p className="text-gray-600 leading-relaxed">
@@ -25,7 +25,7 @@ export default function PressReleasePage() {
               </p>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="customSubHeading mb-4">
                 Stay Informed through Your Portal
               </h2>
               <p className="text-gray-600 leading-relaxed">
@@ -39,9 +39,7 @@ export default function PressReleasePage() {
 
           {/* "What to Expect" Section */}
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              What to Expect
-            </h2>
+            <h2 className="customSubHeading mb-4">What to Expect</h2>
             <p className="text-gray-600 leading-relaxed">
               When there are newsworthy events, accomplishments, or important
               updates about Quantum, you can expect to find:
@@ -59,9 +57,7 @@ export default function PressReleasePage() {
                 height={300}
                 className="rounded-lg object-cover mx-auto"
               />
-              <h3 className="text-xl font-bold text-gray-800 mt-4">
-                Press Releases
-              </h3>
+              <h3 className="customSubHeading mt-4">Press Releases</h3>
               <p className="text-gray-600 leading-relaxed">
                 Access to official statements and announcements from Quantum.
               </p>
@@ -69,9 +65,14 @@ export default function PressReleasePage() {
 
             {/* News Highlights */}
             <div className="text-center">
-              <h3 className="text-xl font-bold text-gray-800 mt-4">
-                News Highlights
-              </h3>
+              <Image
+                src={NEWS_IMG}
+                alt="Press Releases"
+                width={400}
+                height={300}
+                className="rounded-lg object-cover mx-auto"
+              />
+              <h3 className="customSubHeading mt-4">News Highlights</h3>
               <p className="text-gray-600 leading-relaxed">
                 A collection of noteworthy news articles and features related to
                 Quantum and our community.
@@ -80,9 +81,14 @@ export default function PressReleasePage() {
 
             {/* Media Coverage */}
             <div className="text-center">
-              <h3 className="text-xl font-bold text-gray-800 mt-4">
-                Media Coverage
-              </h3>
+              <Image
+                src={NEWS_IMG}
+                alt="Press Releases"
+                width={400}
+                height={300}
+                className="rounded-lg object-cover mx-auto"
+              />
+              <h3 className="customSubHeading mt-4">Media Coverage</h3>
               <p className="text-gray-600 leading-relaxed">
                 Links to media coverage featuring Quantum, our students,
                 faculty, and staff.
@@ -92,7 +98,7 @@ export default function PressReleasePage() {
 
           {/* Footer Section */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="customSubHeading mb-4">
               Stay Tuned for Exciting Updates
             </h2>
             <p className="text-gray-600 leading-relaxed">

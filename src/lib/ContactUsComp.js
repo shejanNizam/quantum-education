@@ -7,7 +7,7 @@ export default function ContactUsComp({ heading }) {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Section */}
           <div>
-            <h4 className="text-3xl font-bold text-gray-800 mb-4">
+            <h4 className="customSubHeading mb-4">
               {heading}
               {/* Contact us */}
             </h4>

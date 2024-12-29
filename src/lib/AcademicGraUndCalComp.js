@@ -14,7 +14,7 @@ export default function AcademicGraUndCalComp({
           <h6 className="text-xl font-semibold text-gray-600 uppercase mb-2">
             {subHeading}
           </h6>
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">{heading}</h1>
+          <h1 className="customSubHeading mb-4">{heading}</h1>
           <p className="text-gray-600 leading-relaxed">{description}</p>
         </div>
         <div className="max-w-7xl mx-auto space-y-16">

@@ -52,15 +52,13 @@ export default function StudentPortalPage() {
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Heading */}
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 md:mb-0">
+          <h1 className="customSubHeading mb-6 md:mb-0">
             Welcome to Quantums Student Portal
           </h1>
 
           {/* Subheading and Description */}
           <div>
-            <h4 className="text-xl md:text-2xl font-semibold text-gray-700 mb-4">
-              Your Gateway to Success!
-            </h4>
+            <h4 className="customSubHeading mb-4">Your Gateway to Success!</h4>
             <p className="text-gray-600 leading-relaxed">
               Congratulations on your enrollment at Quantum! Our Student Portal
               is your digital haven, designed to simplify and enhance your
@@ -72,9 +70,7 @@ export default function StudentPortalPage() {
         {/* all cards */}
         <div className="max-w-7xl mx-auto my-12">
           {/* Heading */}
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">
-            Heres what you need to know
-          </h2>
+          <h2 className="customSubHeading mb-8">Heres what you need to know</h2>
 
           {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
@@ -101,7 +97,7 @@ export default function StudentPortalPage() {
         </div>
         {/*  */}
         <div>
-          <h3 className="text-6xl font-bold">Accessing Your Portal</h3>
+          <h3 className="customHeading">Accessing Your Portal</h3>
           <p>
             Upon successful enrollment, you will automatically receive access to
             our Student Portal via email. It’s that simple! Just check your
@@ -114,9 +110,7 @@ export default function StudentPortalPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 my-12 items-center">
           {/* Text Section */}
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-              Need Help?
-            </h1>
+            <h1 className="customHeading mb-4">Need Help?</h1>
             <p className="text-gray-600 leading-relaxed">
               In the rare event that you haven’t received access to the Student
               Portal or encounter any issues, our Student Services team is here

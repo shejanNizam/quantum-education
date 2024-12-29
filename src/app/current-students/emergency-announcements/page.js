@@ -12,7 +12,7 @@ export default function EmergencyAnnouncementsPage() {
         <div className="max-w-7xl mx-auto space-y-8">
           {/* First Section */}
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            <h1 className="customSubHeading mb-4">
               Welcome to Quantums Emergency Announcements Page
             </h1>
             <p className="text-gray-600 text-lg leading-relaxed">
@@ -40,9 +40,7 @@ export default function EmergencyAnnouncementsPage() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left Section */}
             <div>
-              <h4 className="text-3xl font-bold text-gray-800 mb-4">
-                Urgent Inquiries
-              </h4>
+              <h4 className="customSubHeading mb-4">Urgent Inquiries</h4>
               <p className="text-gray-600 leading-relaxed mb-4">
                 If you have questions or require more information about our
                 programs or potential future graduate offerings, please don’t
@@ -76,9 +74,7 @@ export default function EmergencyAnnouncementsPage() {
         </div>
 
         <div>
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Stay Informed
-          </h1>
+          <h1 className="customSubHeading mb-4">Stay Informed</h1>
           <p className="text-gray-600 text-lg leading-relaxed">
             We encourage you to periodically check this Emergency Announcements
             page for updates, even when there are no current emergencies. Being
