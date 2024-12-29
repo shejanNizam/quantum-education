@@ -9,8 +9,8 @@ import LOGO from "../assets/logo.png";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(null); // Tracks main menu
-  const [activeSubMenu, setActiveSubMenu] = useState({}); // Tracks submenus
+  const [activeMenu, setActiveMenu] = useState(null);
+  const [activeSubMenu, setActiveSubMenu] = useState({});
   const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -246,7 +246,7 @@ export default function Navbar() {
                           : null
                       }
                     >
-                      <div className="flex justify-between items-center px-4 py-2  hover:text-white hover:bg-primary">
+                      <div className="flex justify-between items-center px-4 py-2 cursor-pointer hover:text-white hover:bg-primary">
                         {sub.subSubMenu ? (
                           <>
                             <span className="font-medium">{sub.label}</span>
