@@ -1,7 +1,7 @@
 export default function PartnershipPage() {
   return (
     <>
-      <h3 className="min-h-screen">PartnershipPage</h3>
+      <h3 className="min-h-screen">PartnershipPage Upcoming </h3>
     </>
   );
 }
