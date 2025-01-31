@@ -45,7 +45,7 @@ export async function POST(request) {
 export async function GET() {
   const client = new MongoClient(process.env.MONGODB_URI);
   await client.connect();
-  const db = client.db("dynamic_text");
+  const db = client.db("dynamic_text"); // get request
 
   try {
     // Fetch the latest banner text
