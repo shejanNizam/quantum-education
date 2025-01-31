@@ -299,7 +299,10 @@ export default function Navbar() {
 
           {/* Contact Us Button for Desktop */}
           <Link href={`/contact`}>
-            <CustomButtonComp>Free Career Consultation</CustomButtonComp>
+            <CustomButtonComp>
+              {" "}
+              <span className="text-sm">Schedule Free Career Consultation</span>
+            </CustomButtonComp>
           </Link>
         </div>
 
