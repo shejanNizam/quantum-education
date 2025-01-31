@@ -440,7 +440,9 @@ export default function Navbar() {
                 {/* Contact Us Button for Mobile */}
                 <Link href={`/contact`}>
                   <CustomButtonComp onClick={closeMobileMenu}>
-                    Free Career Consultation
+                    <span className="text-sm">
+                      Schedule Free Career Consultation
+                    </span>
                   </CustomButtonComp>
                 </Link>
               </div>

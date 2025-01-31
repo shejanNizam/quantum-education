@@ -8,12 +8,27 @@ import { CgArrowTopRight } from "react-icons/cg";
 import BG_IMAGE from "../../assets/banner_img/bg_banner.png";
 import styles from "./Banner.module.css";
 
+import { useEffect, useState } from "react"; // added for dymanic
+
 const russoOne = Russo_One({
   subsets: ["latin"],
   weight: "400",
 });
 
 export default function Banner({ onApplyClick }) {
+  const [bannerText, setBannerText] = useState({ text1: "", text2: "" });
+
+  useEffect(() => {
+    fetch("/api/banner")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.text1 && data.text2) {
+          setBannerText(data); // Update state with fetched data
+        }
+      })
+      .catch((error) => console.error("Failed to fetch banner text:", error));
+  }, []);
+
   // Variants for initial load animations
   const initialVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -69,23 +84,31 @@ export default function Banner({ onApplyClick }) {
             Kickstart Your Career with Experts
           </text>
         </motion.svg>
-
+        <button className="px-4 py-2 mb-4 bg-white text-primary disabled rounded-full  font-bold text-2xl shadow-2xl">
+          UNITING MINDS AND AI
+        </button>
         {/* Paragraph with scroll animation */}
         <motion.p
           variants={scrollVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.8 }}
-          className="text-lg md:text-xl text-gray-200 mb-8 customHeading" // Tailwind classes for paragraph
+          className="text-lg md:text-xl text-gray-200 mb-8 customHeading md:w-[50%] mx-auto " // Tailwind classes for paragraph
         >
-          Discover an affordable, fast-track path to professional success at our{" "}
-          <br /> accelerated higher-learning institution.
+          Discover an affordable, fast-track path to professional success at our
+          accelerated higher-learning institution.
           <br />
           <br />
           Experience the fusion of academia and industry firsthand. Secure your
-          spot on our <br /> waiting list for the{" "}
+          spot on our waiting list for the
           {`Summer Semester of ${new Date().getFullYear()}`}.
         </motion.p>
+
+        {/* dynamic  // added for dymanic */}
+
+        <h1 className="text-2xl font-bold text-white">{bannerText.text1}</h1>
+        <p className="text-lg text-white">{bannerText.text2}</p>
+        {/* dynamic */}
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-4 my-8 justify-center">
@@ -130,18 +153,6 @@ export default function Banner({ onApplyClick }) {
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Sponsored by section with scroll animation */}
-        <motion.div
-          variants={scrollVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.8 }}
-          className="text-sm text-gray-200 mt-6" // Tailwind classes for text
-        >
-          Sponsored by:{" "}
-          <span className="font-semibold">Your Sponsors Here</span>
-        </motion.div>
       </div>
     </motion.div>
   );
