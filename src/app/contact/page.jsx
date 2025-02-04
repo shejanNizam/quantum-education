@@ -15,7 +15,12 @@ export default function ContactPage() {
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <div className="customHeading"> Contact Us </div>
         <div className="flex justify-center">
-          <Image src={CONTACT_IMAGE} alt="CONTACT_IMAGE" />
+          <Image
+            objectFit="cover"
+            priority={true}
+            src={CONTACT_IMAGE}
+            alt="CONTACT_IMAGE"
+          />
         </div>
 
         <ContactFormComp />

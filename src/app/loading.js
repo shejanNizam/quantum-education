@@ -5,6 +5,8 @@ export default function Loading() {
     <>
       <div className="w-[90%] mx-auto">
         <Image
+          objectFit="cover"
+          priority={true}
           src="https://i.stack.imgur.com/hzk6C.gif"
           width={500}
           height={500}

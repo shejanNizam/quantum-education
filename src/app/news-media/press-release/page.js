@@ -51,6 +51,8 @@ export default function PressReleasePage() {
             {/* Press Releases */}
             <div className="text-center">
               <Image
+                objectFit="cover"
+                priority={true}
                 src={NEWS_IMG}
                 alt="Press Releases"
                 width={400}
@@ -66,6 +68,8 @@ export default function PressReleasePage() {
             {/* News Highlights */}
             <div className="text-center">
               <Image
+                objectFit="cover"
+                priority={true}
                 src={NEWS_IMG}
                 alt="Press Releases"
                 width={400}
@@ -82,6 +86,8 @@ export default function PressReleasePage() {
             {/* Media Coverage */}
             <div className="text-center">
               <Image
+                objectFit="cover"
+                priority={true}
                 src={NEWS_IMG}
                 alt="Press Releases"
                 width={400}

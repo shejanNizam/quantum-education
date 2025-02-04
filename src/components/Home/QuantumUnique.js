@@ -71,6 +71,8 @@ export default function QuantumUnique() {
           <motion.div className="mb-8" variants={itemVariants}>
             <h3 className="customSubHeading flex items-center gap-2">
               <Image
+                objectFit="cover"
+                priority={true}
                 src={logo1}
                 alt="Dynamic Curriculum"
                 width={40}
@@ -88,6 +90,8 @@ export default function QuantumUnique() {
           <motion.div className="mb-8" variants={itemVariants}>
             <h3 className="customSubHeading flex items-center gap-2">
               <Image
+                objectFit="cover"
+                priority={true}
                 src={logo2}
                 alt="Real-World Projects"
                 width={40}
@@ -104,7 +108,14 @@ export default function QuantumUnique() {
           {/* Feature 3 */}
           <motion.div className="mb-8" variants={itemVariants}>
             <h3 className="customSubHeading flex items-center gap-2">
-              <Image src={logo3} alt="Career Support" width={40} height={40} />
+              <Image
+                objectFit="cover"
+                priority={true}
+                src={logo3}
+                alt="Career Support"
+                width={40}
+                height={40}
+              />
               Career Support
             </h3>
             <p className="ml-14 font-semibold">
@@ -116,7 +127,14 @@ export default function QuantumUnique() {
           {/* Feature 4 */}
           <motion.div className="mb-8" variants={itemVariants}>
             <h3 className="customSubHeading flex items-center gap-2">
-              <Image src={logo4} alt="Outcomes First" width={40} height={40} />
+              <Image
+                objectFit="cover"
+                priority={true}
+                src={logo4}
+                alt="Outcomes First"
+                width={40}
+                height={40}
+              />
               Outcomes First
             </h3>
             <p className="ml-14 font-semibold">
@@ -128,7 +146,13 @@ export default function QuantumUnique() {
 
         {/* Unique Image */}
         <motion.div className="w-full" variants={imageVariants}>
-          <Image src={UNIQUE_IMG} alt="Quantum Unique" className="mx-auto" />
+          <Image
+            objectFit="cover"
+            priority={true}
+            src={UNIQUE_IMG}
+            alt="Quantum Unique"
+            className="mx-auto"
+          />
         </motion.div>
       </motion.div>
     </motion.div>

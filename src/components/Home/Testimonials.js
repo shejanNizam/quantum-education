@@ -117,6 +117,8 @@ export default function Testimonials() {
                 <Card className="w-full h-full ">
                   <CardContent className="bg-white rounded-2xl flex flex-col items-center text-center p-2">
                     <Image
+                      objectFit="cover"
+                      priority={true}
                       className="rounded-full mb-6"
                       width={80}
                       height={80}

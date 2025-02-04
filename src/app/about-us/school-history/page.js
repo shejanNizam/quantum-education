@@ -56,7 +56,12 @@ export default function SchoolHistoryPage() {
     <>
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <div className="flex justify-center">
-          <Image src={SCHOOL_HISTORY_IMAGE} alt="COO_IMAGE" />
+          <Image
+            objectFit="cover"
+            priority={true}
+            src={SCHOOL_HISTORY_IMAGE}
+            alt="COO_IMAGE"
+          />
         </div>
         <div>
           {schoolHistory.map((history) => (

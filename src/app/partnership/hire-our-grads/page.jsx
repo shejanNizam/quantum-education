@@ -38,10 +38,10 @@ export default function PartnershipPage() {
       {/* banner */}
       <div className="relative h-96">
         <Image
+          objectFit="cover"
+          priority={true}
           src={BG_IMAGE} // Use Image component for Next.js image handling
           alt="Banner Image"
-          layout="fill" // Ensures the image covers the entire div
-          objectFit="cover" // Ensures the image covers the space without distortion
           className="absolute inset-0" // Position the image absolutely inside the div
         />
 

@@ -47,6 +47,8 @@ export default function AccreditationCertificationPage() {
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <div className="flex justify-center">
           <Image
+            objectFit="cover"
+            priority={true}
             src={ACCREDITATION_CERTIFICATION_IMAGE}
             alt="ACCREDITATION_CERTIFICATION_IMAGE"
           />

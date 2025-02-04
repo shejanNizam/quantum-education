@@ -14,6 +14,8 @@ export default function FaqsPage() {
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <div className="flex flex-col md:flex-row justify-start items-center space-y-4 md:space-y-0 md:space-x-4">
           <Image
+            objectFit="cover"
+            priority={true}
             src={LOGO}
             alt="logo"
             className="w-32 h-32 md:w-32 md:h-32 lg:w-40 lg:h-40"

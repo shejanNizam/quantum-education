@@ -94,6 +94,8 @@ export default function LeadershipStaffPage() {
               {/* Card container with flex-grow to equalize height */}
               <div className="flex flex-col items-center bg-white rounded-lg shadow-xl overflow-hidden hover:drop-shadow-2xl transition-shadow duration-200 max-w-sm w-full flex-grow">
                 <Image
+                  objectFit="cover"
+                  priority={true}
                   src={member.image}
                   alt={member.name}
                   className="object-cover"

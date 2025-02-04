@@ -15,6 +15,8 @@ export default function WorkforceAcceleratorComp({
           {/* Image Section */}
           <div className="flex justify-center">
             <Image
+              objectFit="cover"
+              priority={true}
               src={image}
               alt={"image"}
               width={400}

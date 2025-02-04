@@ -114,13 +114,14 @@ export default function AlumniWork() {
                   <CardContent className="bg-white rounded flex items-center justify-center text-center p-4">
                     <div className="w-full h-full relative">
                       <Image
+                        objectFit="cover"
+                        priority={true}
                         src={image}
                         alt={`Alumni work ${index + 1}`}
                         layout="responsive"
                         width={1000}
                         height={1000}
                         className="object-cover rounded-md w-40 h-40"
-                        priority={false}
                       />
                     </div>
                   </CardContent>

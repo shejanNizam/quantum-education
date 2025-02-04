@@ -38,6 +38,8 @@ export default function AlumniAssociationPage() {
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <div className="flex justify-center">
           <Image
+            objectFit="cover"
+            priority={true}
             src={ALUMNI_ASSOCIATION_IMAGE}
             alt="ALUMNI_ASSOCIATION_IMAGE"
           />

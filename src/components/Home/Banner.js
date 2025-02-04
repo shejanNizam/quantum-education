@@ -101,7 +101,7 @@ export default function Banner({ onApplyClick }) {
           <br />
           Experience the fusion of academia and industry firsthand. Secure your
           spot on our waiting list for the
-          {`Summer Semester of ${new Date().getFullYear()}`}.
+          {` Summer Semester of ${new Date().getFullYear()}`}.
         </motion.p>
 
         {/* dynamic  // added for dymanic */}

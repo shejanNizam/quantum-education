@@ -30,6 +30,8 @@ export default function AcademicGraUndCalComp({
                 }`}
               >
                 <Image
+                  objectFit="cover"
+                  priority={true}
                   src={section.imageSrc}
                   alt={section.imageAlt}
                   width={500}

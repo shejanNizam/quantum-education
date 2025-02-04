@@ -44,7 +44,14 @@ export default function Updates() {
         >
           <motion.div variants={itemVariants}>
             <h3 className="customSubHeading flex items-center gap-2">
-              <Image src={logo1} alt="logo1" width={50} height={50} />
+              <Image
+                objectFit="cover"
+                priority={true}
+                src={logo1}
+                alt="logo1"
+                width={50}
+                height={50}
+              />
               NEW PROGRAMS
             </h3>
             <ul className="ml-14 font-semibold">
@@ -66,7 +73,14 @@ export default function Updates() {
           </motion.div>
           <motion.div variants={itemVariants}>
             <h3 className="customSubHeading flex items-center gap-2">
-              <Image src={logo2} alt="logo1" width={50} height={50} />
+              <Image
+                objectFit="cover"
+                priority={true}
+                src={logo2}
+                alt="logo1"
+                width={50}
+                height={50}
+              />
               TOP PROGRAMS
             </h3>
             <ul className="ml-14 font-semibold">
@@ -100,7 +114,14 @@ export default function Updates() {
           </motion.div>
           <motion.div variants={itemVariants}>
             <h3 className="customSubHeading flex items-center gap-2">
-              <Image src={logo3} alt="logo1" width={50} height={50} />
+              <Image
+                objectFit="cover"
+                priority={true}
+                src={logo3}
+                alt="logo1"
+                width={50}
+                height={50}
+              />
               MATERIALS
             </h3>
             <ul className="ml-14 font-semibold">

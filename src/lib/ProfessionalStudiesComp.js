@@ -50,7 +50,7 @@ export default function ProfessionalStudiesComp({
       <div>
         <h1 className="customHeading mb-8"> {heading} </h1>
         <p className="mb-8"> {description} </p>
-        <Image src={image} alt="image" />
+        <Image objectFit="cover" priority={true} src={image} alt="image" />
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
             {professionalStudyBenefits.map((benefit) => (

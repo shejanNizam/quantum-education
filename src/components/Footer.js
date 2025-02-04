@@ -62,7 +62,12 @@ export default function Footer() {
         className="flex justify-center m-8"
         variants={sectionVariants}
       >
-        <Image src={FOOTER_IMG} alt="Footer Background" />
+        <Image
+          objectFit="cover"
+          priority={true}
+          src={FOOTER_IMG}
+          alt="Footer Background"
+        />
       </motion.div>
 
       {/* Main Footer Content */}
@@ -74,7 +79,14 @@ export default function Footer() {
           {/* Logo and Address Section */}
           <motion.div variants={sectionVariants}>
             <Link className="flex items-center justify-start " href="/">
-              <Image src={LOGO} alt="Quantum Logo" width={60} height={60} />
+              <Image
+                objectFit="cover"
+                priority={true}
+                src={LOGO}
+                alt="Quantum Logo"
+                width={60}
+                height={60}
+              />
               <motion.h2
                 className="customSubHeading"
                 variants={sectionVariants}

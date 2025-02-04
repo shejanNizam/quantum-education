@@ -169,7 +169,14 @@ export default function Navbar() {
         {/* Logo */}
         <div>
           <Link href={`/`}>
-            <Image src={LOGO} alt="logo" width={120} height={120} />
+            <Image
+              objectFit="cover"
+              priority={true}
+              src={LOGO}
+              alt="logo"
+              width={120}
+              height={120}
+            />
           </Link>
         </div>
 
@@ -338,7 +345,14 @@ export default function Navbar() {
               {/* Header */}
               <div className="flex justify-between items-center px-4 py-3 border-b">
                 <Link href={`/`}>
-                  <Image src={LOGO} alt="logo" width={80} height={80} />
+                  <Image
+                    objectFit="cover"
+                    priority={true}
+                    src={LOGO}
+                    alt="logo"
+                    width={80}
+                    height={80}
+                  />
                 </Link>
                 <button onClick={toggleMenu} className="focus:outline-none">
                   <FaTimes size={24} className="text-primary" />
