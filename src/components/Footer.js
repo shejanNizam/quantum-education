@@ -94,11 +94,26 @@ export default function Footer() {
                 Quantum
               </motion.h2>
             </Link>
+            {/* Address (Click to open Google Maps) */}
             <motion.p variants={sectionVariants}>
-              3100 Clarendon Blvd #200
+              <a
+                href="https://www.google.com/maps?q=3100+Clarendon+Blvd+%23200,+Arlington,+Virginia+22201,+United+States"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-primary hover:underline"
+              >
+                3100 Clarendon Blvd #200
+              </a>
             </motion.p>
             <motion.p variants={sectionVariants}>
-              Arlington, Virginia 22201, United States
+              <a
+                href="https://www.google.com/maps?q=3100+Clarendon+Blvd+%23200,+Arlington,+Virginia+22201,+United+States"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg text-primary hover:underline"
+              >
+                Arlington, Virginia 22201, United States
+              </a>
             </motion.p>
             {/* Updated Phone Section */}
             <motion.div

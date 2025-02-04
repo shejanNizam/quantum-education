@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Script from "next/script";
 
 export default function RegistrationForm() {
-  // Variants for initial load animations
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -13,7 +12,6 @@ export default function RegistrationForm() {
     },
   };
 
-  // Variants for scroll-triggered animations
   const scrollVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -47,14 +45,14 @@ export default function RegistrationForm() {
           </motion.h2>
           <motion.p
             variants={scrollVariants}
-            className="p-4 md:p-0 lg:p-0 text-lg text-gray-600"
+            className="p-4 md:p-0 lg:p-0 text-lg text-gray-600 font-semibold"
           >
             It’s never too late to start a new career. Countdown is finished!
             <br />
             <br />
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. <br /> Lorem Ipsum has been the industrys standard dummy
-            text ever since the 1500s.
+            <span className="text-red-700 font-bold">
+              {" Here is the timer but you don't provided the link "}
+            </span>
           </motion.p>
         </motion.div>
 
@@ -74,7 +72,6 @@ export default function RegistrationForm() {
             maxWidth: "850px",
             width: "100%",
             margin: "0 auto",
-            // overflow: "hidden", // Ensures rounded corners apply to iframe
           }}
           whileHover={{
             scale: 1.01,
@@ -88,11 +85,11 @@ export default function RegistrationForm() {
             style={{
               border: "0",
               width: "100%",
-              height: "900px", // Adjust height as needed
+              height: "900px",
 
               borderRadius: "12px",
             }}
-            loading="lazy" // Improves performance by lazy loading the iframe
+            loading="lazy"
             title="Registration Form"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
