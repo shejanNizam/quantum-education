@@ -2,6 +2,7 @@
 
 import AlumniWork from "@/components/Home/AlumniWork";
 import Banner from "@/components/Home/Banner";
+import CareerBlueprint from "@/components/Home/CareerBlueprint";
 import QuantumUnique from "@/components/Home/QuantumUnique";
 import Registration from "@/components/Home/Registration";
 import Test from "@/components/Home/Test";
@@ -22,6 +23,7 @@ export default function Home() {
       {/* <Test /> */}
       <Updates />
       <QuantumUnique />
+      <CareerBlueprint />
       <Testimonials />
       <AlumniWork />
       <div ref={registrationRef}>

@@ -11,8 +11,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import image1 from "../../assets/alumni_work/alumni_work_image_1.png";
-import image2 from "../../assets/alumni_work/alumni_work_image_2.png";
+import image1 from "../../assets/alumni_work/alumni_work_image_1.jpg";
+import image2 from "../../assets/alumni_work/alumni_work_image_2.jpg";
 import image5 from "../../assets/alumni_work/alumni_work_image_5.png";
 
 export default function AlumniWork() {
@@ -117,9 +117,9 @@ export default function AlumniWork() {
                         src={image}
                         alt={`Alumni work ${index + 1}`}
                         layout="responsive"
-                        width={350}
-                        height={250}
-                        className="object-cover rounded-md"
+                        width={1000}
+                        height={1000}
+                        className="object-cover rounded-md w-40 h-40"
                         priority={false}
                       />
                     </div>

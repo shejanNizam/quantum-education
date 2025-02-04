@@ -15,34 +15,34 @@ import image3 from "../../assets/testimonial/testimonial_image_3.png";
 import image4 from "../../assets/testimonial/testimonial_image_4.png";
 
 export default function Testimonials() {
-  const data = [
+  const studentData = [
     {
       _id: 1,
       image: image1,
-      name: "STUDENT NAME",
+      name: "Kavin Vides",
       description:
-        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend.",
+        "What I really liked about Quantum is that they go straight to what you need to know about the job. Is not like your traditional college where you have to take coursers that'll not help you with your career. And the money you pay for this education is extremely different. Abhishek and Said will make sure that you'll be ready for the job. Training you one on one, preparing you for interviews and to perform the job efficiently. If you're interested I highly recommend it. I come from a construction background so you don't need a coding experience to this take this course.",
     },
     {
       _id: 2,
       image: image2,
-      name: "STUDENT NAME",
+      name: "Long Nguyen",
       description:
-        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend.",
+        "I was recommended to join Quantum Institute of Science and Technology by a friend and did not know what to expect when I signed up. But so far, it has been the best career decisions I have ever made. I came here with no background or any knowledge about IT industry and with only one desire to change for the better. And Bright Path makes it possible. You will be surprised by how much you will learn in just a few months following this program...",
     },
     {
       _id: 3,
       image: image3,
-      name: "STUDENT NAME",
+      name: "Erick Estrada",
       description:
-        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend.",
+        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend. Bright Path is much more different than your traditional college, in the sense that a college will make you pay such high tuition fees for only a small fraction of what someone needs to know going into IT. I have been in the course for a couple months and I can easily say that I've learned so much in the little time I've been here.",
     },
     {
       _id: 4,
       image: image4,
-      name: "STUDENT NAME",
+      name: "Puneet Goel",
       description:
-        "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend.",
+        "I highly recommend Quantum Institute of Science and Technology to anyone who is interested in changing their career to Information Technology or those who are interested in taking a different path within IT sector. BPT's instructor is full of knowledge and experience. His teaching style is way easier to understand and you get to learn based on actual projects. On top of that, you get to practice with development tools, techniques and business strategies. If you are looking into any coding boot camps, do NOT pay the high cost of $10,000 plus dollars elsewhere. Join BPT to take advantage of the affordable cost and best coding instructor in the DMV area. ...",
     },
   ];
 
@@ -98,7 +98,7 @@ export default function Testimonials() {
           1024: { slidesPerView: 3, spaceBetween: 30 },
         }}
       >
-        {data.map(({ _id, image, name, description }) => (
+        {studentData.map(({ _id, image, name, description }) => (
           <SwiperSlide key={_id} className="flex justify-center items-center">
             {/* Motion Wrapper for Each Card */}
             <motion.div
@@ -115,7 +115,7 @@ export default function Testimonials() {
                 whileHover="hover"
               >
                 <Card className="w-full h-full ">
-                  <CardContent className="bg-white rounded-2xl flex flex-col items-center text-center p-4">
+                  <CardContent className="bg-white rounded-2xl flex flex-col items-center text-center p-2">
                     <Image
                       className="rounded-full mb-6"
                       width={80}

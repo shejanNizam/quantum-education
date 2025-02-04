@@ -50,11 +50,17 @@ export default function Updates() {
             <ul className="ml-14 font-semibold">
               <li className="flex items-center text-primary">
                 <CgArrowTopRight />
-                <Link href={"/"}> Digital Health Workforce Accelerator </Link>
+                <Link href={"/academics/workforce-accelerator/digital-health"}>
+                  {" "}
+                  Digital Health Workforce Accelerator{" "}
+                </Link>
               </li>
               <li className="flex items-center text-primary">
                 <CgArrowTopRight />
-                <Link href={"/"}> FinTech Workforce Accelerator </Link>
+                <Link href={"/academics/workforce-accelerator/fintech"}>
+                  {" "}
+                  FinTech Workforce Accelerator{" "}
+                </Link>
               </li>
             </ul>
           </motion.div>
@@ -66,15 +72,29 @@ export default function Updates() {
             <ul className="ml-14 font-semibold">
               <li className="flex items-center text-primary">
                 <CgArrowTopRight />
-                <Link href={"/"}> Digital Business </Link>
+                <Link
+                  href={"/academics/professional-studies/digital-engineering"}
+                >
+                  {" "}
+                  Digital Engineering{" "}
+                </Link>
               </li>
               <li className="flex items-center text-primary">
                 <CgArrowTopRight />
-                <Link href={"/"}> Digital Engineering </Link>
+                <Link href={"/academics/professional-studies/digital-business"}>
+                  {" "}
+                  Digital Business{" "}
+                </Link>
               </li>
+
               <li className="flex items-center text-primary">
                 <CgArrowTopRight />
-                <Link href={"/"}> Executive Mentorship </Link>
+                <Link
+                  href={"/academics/workforce-accelerator/executive-mentorship"}
+                >
+                  {" "}
+                  Executive Mentorship{" "}
+                </Link>
               </li>
             </ul>
           </motion.div>

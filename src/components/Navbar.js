@@ -174,7 +174,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 items-center">
+        <div className="hidden md:flex space-x-2 items-center">
           {menuItems.map((menu, menuIndex) => (
             <div
               key={menu.label}
@@ -301,7 +301,9 @@ export default function Navbar() {
           <Link href={`/career-consultation`}>
             <CustomButtonComp>
               {" "}
-              <span className="text-sm">Schedule Free Career Consultation</span>
+              <span className="md:text-xs  xl:text-sm">
+                Schedule Free Career Consultation
+              </span>
             </CustomButtonComp>
           </Link>
         </div>

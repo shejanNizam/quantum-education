@@ -31,6 +31,7 @@ export default function FaqsPage() {
             the power of Artificial Intelligence.
           </p>
         </div>
+
         {/* Accordion faqs */}
         <div className="w-[70%] mx-auto my-8 text-2xl">
           <AccordionComp
