@@ -298,7 +298,7 @@ export default function Navbar() {
           ))}
 
           {/* Contact Us Button for Desktop */}
-          <Link href={`/contact`}>
+          <Link href={`/career-consultation`}>
             <CustomButtonComp>
               {" "}
               <span className="text-sm">Schedule Free Career Consultation</span>
@@ -438,7 +438,7 @@ export default function Navbar() {
                 ))}
 
                 {/* Contact Us Button for Mobile */}
-                <Link href={`/contact`}>
+                <Link href={`/career-consultation`}>
                   <CustomButtonComp onClick={closeMobileMenu}>
                     <span className="text-sm">
                       Schedule Free Career Consultation
