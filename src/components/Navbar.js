@@ -1,6 +1,7 @@
 "use client";
 
 import CustomButtonComp from "@/lib/CustomButtonComp";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -181,7 +182,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-2 items-center">
+        <div className="hidden md:flex items-center">
           {menuItems.map((menu, menuIndex) => (
             <div
               key={menu.label}
@@ -197,7 +198,7 @@ export default function Navbar() {
                   }`}
                   onClick={closeMobileMenu}
                 >
-                  {menu.label}
+                  <span className="text-sm">{menu.label}</span>
                   <FaChevronDown
                     className={`transform transition-transform duration-300 ${
                       activeMenu === menuIndex ? "rotate-180" : ""
@@ -306,12 +307,17 @@ export default function Navbar() {
 
           {/* Contact Us Button for Desktop */}
           <Link href={`/career-consultation`}>
-            <CustomButtonComp>
-              {" "}
-              <span className="md:text-xs  xl:text-sm">
-                Schedule Free Career Consultation
-              </span>
-            </CustomButtonComp>
+            {" "}
+            <motion.button
+              whileHover={{ scale: 1.1 }} // Animation when hovered
+              whileTap={{ scale: 0.8 }} // Animation when clicked
+              initial={{ opacity: 0, y: 10 }} // Initial animation on render
+              animate={{ opacity: 1, y: 0 }} // Final state of the animation
+              transition={{ duration: 0.3 }}
+              className="md:text-xs  xl:text-sm customButtonN"
+            >
+              Schedule Free Career Consultation
+            </motion.button>
           </Link>
         </div>
 

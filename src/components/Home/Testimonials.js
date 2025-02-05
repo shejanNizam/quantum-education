@@ -120,7 +120,7 @@ export default function Testimonials() {
                 onClick={() => handleCardClick(index)} // Toggle text visibility on click
               >
                 <Card className="w-full h-full">
-                  <CardContent className="bg-white rounded-2xl flex flex-col items-center text-center px-2 py-4">
+                  <CardContent className="bg-white rounded-2xl flex flex-col items-center text-center px-2">
                     <Image
                       objectFit="cover"
                       priority={true}
