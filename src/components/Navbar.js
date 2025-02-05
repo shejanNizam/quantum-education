@@ -198,7 +198,7 @@ export default function Navbar() {
                   }`}
                   onClick={closeMobileMenu}
                 >
-                  <span className="text-sm">{menu.label}</span>
+                  <span className=" text-xs md:text-sm ">{menu.label}</span>
                   <FaChevronDown
                     className={`transform transition-transform duration-300 ${
                       activeMenu === menuIndex ? "rotate-180" : ""
