@@ -63,12 +63,12 @@ export default function Banner({ onApplyClick }) {
 
       {/* Content Container */}
       <div className={styles.content}>
-        {/* Animated SVG Heading */}
+        {/* slogan */}
         <motion.svg
           variants={scrollVariants}
           initial="hidden"
           whileInView="visible"
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 0.7 }}
           viewport={{ once: true, amount: 1 }}
           className={`${styles.animatedSvg} ${russoOne.className}`} // Apply the font class here
           xmlns="http://www.w3.org/2000/svg"
@@ -81,33 +81,54 @@ export default function Banner({ onApplyClick }) {
             dominantBaseline="middle"
             className={`${styles.animatedText}`}
           >
+            UNITING MINDS AND AI
+          </text>
+        </motion.svg>
+
+        {/* Animated SVG Heading */}
+        <motion.svg
+          variants={scrollVariants}
+          initial="hidden"
+          whileInView="visible"
+          whileHover={{ scale: 1.1 }}
+          viewport={{ once: true, amount: 1 }}
+          className={`${styles.animatedSvg} ${russoOne.className}`}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1000 150"
+        >
+          <text
+            x="50%"
+            y="50%"
+            textAnchor="middle"
+            dominantBaseline="middle"
+            className={`${styles.animatedText}`}
+          >
             Kickstart Your Career with Experts
           </text>
         </motion.svg>
-        <button className="px-4 py-2 mb-4 bg-white text-primary disabled rounded-full  font-bold text-2xl shadow-2xl">
-          UNITING MINDS AND AI
-        </button>
+
         {/* Paragraph with scroll animation */}
         <motion.p
           variants={scrollVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.8 }}
-          className="text-lg md:text-xl text-gray-200 mb-8 customHeading md:w-[50%] mx-auto " // Tailwind classes for paragraph
+          className="text-lg md:text-xl text-gray-200 mb-8 customHeading md:w-[50%] mx-auto "
         >
-          Discover an affordable, fast-track path to professional success at our
-          accelerated higher-learning institution.
+          {/* Discover an affordable, fast-track path to professional success at our
+          accelerated higher-learning institution. */}
+          {bannerText.text1}
           <br />
           <br />
-          Experience the fusion of academia and industry firsthand. Secure your
-          spot on our waiting list for the
-          {` Summer Semester of ${new Date().getFullYear()}`}.
+          {/* Experience the fusion of academia and industry firsthand. Secure your
+          spot on our waiting list for the Summer Semester of{" "} */}
+          {bannerText.text2} {`${new Date().getFullYear()}`}.
         </motion.p>
 
         {/* dynamic  // added for dymanic */}
 
-        <h1 className="text-2xl font-bold text-white">{bannerText.text1}</h1>
-        <p className="text-lg text-white">{bannerText.text2}</p>
+        <h1 className="text-2xl font-bold text-white"></h1>
+        <p className="text-lg text-white"></p>
         {/* dynamic */}
 
         {/* Buttons */}

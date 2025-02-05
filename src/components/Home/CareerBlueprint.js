@@ -11,7 +11,7 @@ export default function CareerBlueprint() {
       </div>
       <div className="p-8 rounded-lg shadow-xl bg-gradient-to-r from-primary/20 to-secondary/20">
         <div className="text-center text-white mb-8">
-          <Text className="text-lg">12–14 Weeks</Text>
+          <Text className="text-xl font-bold">12–14 Weeks</Text>
         </div>
 
         <Row gutter={[16, 16]} justify="center">
@@ -86,7 +86,7 @@ export default function CareerBlueprint() {
         <Divider className="border-white" />
         {/* Post Graduation Heading */}
         <div className="text-center text-white mb-8">
-          <Text className="text-xl font-semibold">Post Graduation</Text>
+          <Text className="text-xl font-bold">Post Graduation</Text>
         </div>
 
         <Row gutter={[16, 16]} justify="center">

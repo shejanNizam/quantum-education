@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import React from "react";
 import image1 from "../../assets/testimonial/testimonial_image_1.png";
 import image2 from "../../assets/testimonial/testimonial_image_2.png";
 import image3 from "../../assets/testimonial/testimonial_image_3.png";
@@ -17,28 +18,24 @@ import image4 from "../../assets/testimonial/testimonial_image_4.png";
 export default function Testimonials() {
   const studentData = [
     {
-      _id: 1,
       image: image1,
       name: "Kavin Vides",
       description:
         "What I really liked about Quantum is that they go straight to what you need to know about the job. Is not like your traditional college where you have to take coursers that'll not help you with your career. And the money you pay for this education is extremely different. Abhishek and Said will make sure that you'll be ready for the job. Training you one on one, preparing you for interviews and to perform the job efficiently. If you're interested I highly recommend it. I come from a construction background so you don't need a coding experience to this take this course.",
     },
     {
-      _id: 2,
       image: image2,
       name: "Long Nguyen",
       description:
         "I was recommended to join Quantum Institute of Science and Technology by a friend and did not know what to expect when I signed up. But so far, it has been the best career decisions I have ever made. I came here with no background or any knowledge about IT industry and with only one desire to change for the better. And Bright Path makes it possible. You will be surprised by how much you will learn in just a few months following this program...",
     },
     {
-      _id: 3,
       image: image3,
       name: "Erick Estrada",
       description:
         "I would without a doubt recommend Quantum Institute of Science and Technology to anyone looking for a career change or wanting to try something different. My background is construction, and I heard about BPT through a well-known family friend. Bright Path is much more different than your traditional college, in the sense that a college will make you pay such high tuition fees for only a small fraction of what someone needs to know going into IT. I have been in the course for a couple months and I can easily say that I've learned so much in the little time I've been here.",
     },
     {
-      _id: 4,
       image: image4,
       name: "Puneet Goel",
       description:
@@ -62,6 +59,13 @@ export default function Testimonials() {
       boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.2)",
       transition: { duration: 0.3, ease: "easeOut" },
     },
+  };
+
+  // State to handle text visibility
+  const [expandedIndex, setExpandedIndex] = React.useState(null);
+
+  const handleCardClick = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index); // Toggle visibility
   };
 
   return (
@@ -98,8 +102,8 @@ export default function Testimonials() {
           1024: { slidesPerView: 3, spaceBetween: 30 },
         }}
       >
-        {studentData.map(({ _id, image, name, description }) => (
-          <SwiperSlide key={_id} className="flex justify-center items-center">
+        {studentData.map(({ image, name, description }, index) => (
+          <SwiperSlide key={index} className="flex justify-center items-center">
             {/* Motion Wrapper for Each Card */}
             <motion.div
               variants={cardVariants}
@@ -113,9 +117,10 @@ export default function Testimonials() {
                 className="cursor-pointer"
                 variants={hoverVariants}
                 whileHover="hover"
+                onClick={() => handleCardClick(index)} // Toggle text visibility on click
               >
-                <Card className="w-full h-full ">
-                  <CardContent className="bg-white rounded-2xl flex flex-col items-center text-center p-2">
+                <Card className="w-full h-full">
+                  <CardContent className="bg-white rounded-2xl flex flex-col items-center text-center px-2 py-4">
                     <Image
                       objectFit="cover"
                       priority={true}
@@ -127,7 +132,17 @@ export default function Testimonials() {
                       quality={100}
                     />
                     <p className="font-semibold text-gray-800">{name}</p>
-                    <p className="text-gray-600 mt-4 px-4">{description}</p>
+                    <p
+                      className={`text-gray-600 mt-4 px-4 transition-all duration-300 ${
+                        expandedIndex === index ? "max-h-none" : "max-h-[120px]"
+                      }`}
+                      style={{
+                        overflow:
+                          expandedIndex === index ? "visible" : "hidden",
+                      }}
+                    >
+                      {description}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
