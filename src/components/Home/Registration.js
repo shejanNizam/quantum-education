@@ -25,7 +25,7 @@ export default function RegistrationForm() {
 
   // Countdown Timer Logic
   const [timeLeft, setTimeLeft] = useState({
-    days: 0,
+    days: 1,
     hours: 0,
     minutes: 0,
     seconds: 0,
