@@ -15,7 +15,7 @@ export async function POST(request) {
       }
     );
   }
-  if (email !== "admin@gmail.com" && password !== "1qazxsw2") {
+  if (email !== "admin@gmail.com" || password !== "1qazxsw2") {
     return new Response(
       JSON.stringify({
         success: false,
