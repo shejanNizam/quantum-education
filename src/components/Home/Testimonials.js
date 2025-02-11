@@ -124,7 +124,7 @@ export default function Testimonials() {
                     <Image
                       objectFit="cover"
                       priority={true}
-                      className="rounded-full mb-6"
+                      className="rounded-full my-6"
                       width={80}
                       height={80}
                       src={image}

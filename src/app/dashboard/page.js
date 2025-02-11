@@ -106,17 +106,19 @@ export default function Dashboard() {
             htmlType="submit"
             loading={isSubmitting}
             disabled={!text1.trim() || !text2.trim()}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md shadow-sm"
+            className="w-full text-white font-semibold py-2 px-4 rounded-md shadow-sm"
           >
             {isSubmitting ? "Updating..." : "Update Banner"}
           </Button>
         </form>
-        <button
-          onClick={handleLogout}
-          className="mt-4 bg-red-500 text-white px-4 py-2 rounded flex justify-end"
-        >
-          Logout
-        </button>
+        <div className="flex justify-end">
+          <button
+            onClick={handleLogout}
+            className="mt-4 bg-red-500 text-white px-4 py-2 rounded "
+          >
+            Logout
+          </button>
+        </div>
       </div>
     </>
   );

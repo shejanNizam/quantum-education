@@ -55,7 +55,7 @@ export default function RegistrationForm() {
     };
 
     const timerInterval = setInterval(updateTimer, 1000);
-    return () => clearInterval(timerInterval); // Clean up the interval on component unmount
+    return () => clearInterval(timerInterval);
   }, []);
 
   return (
@@ -159,7 +159,7 @@ export default function RegistrationForm() {
           {/* Dynamically load the Cognito iframe.js script */}
           <Script
             src="https://www.cognitoforms.com/f/iframe.js"
-            strategy="lazyOnload" // Loads script only when the page has loaded
+            strategy="lazyOnload"
           />
         </motion.div>
       </div>
