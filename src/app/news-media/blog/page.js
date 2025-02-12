@@ -1,5 +1,6 @@
 import ContactUsComp from "@/lib/ContactUsComp";
 import { getMetadata } from "@/lib/utils";
+import Link from "next/link";
 export async function generateMetadata() {
   return getMetadata({ title: "Blog - Quantum Institute" });
 }
@@ -24,9 +25,20 @@ export default function BlogPage() {
               </p>
             </div>
             <div className="flex flex-col space-y-4">
-              <button className="customButton">Explore</button>
-              <button className="customButton">Learn</button>
-              <button className="customButton">Connect</button>
+              <Link href={"/"} className="customButton">
+                {" "}
+                Explore{" "}
+              </Link>
+
+              <Link href={"/"} className="customButton">
+                {" "}
+                Learn{" "}
+              </Link>
+
+              <Link href={"/"} className="customButton">
+                {" "}
+                Connect{" "}
+              </Link>
             </div>
           </div>
 

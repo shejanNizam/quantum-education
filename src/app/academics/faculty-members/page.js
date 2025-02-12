@@ -1,4 +1,5 @@
 import { getMetadata } from "@/lib/utils";
+import Link from "next/link";
 export async function generateMetadata() {
   return getMetadata({ title: "FacultyMembers - Quantum Institute" });
 }
@@ -45,7 +46,9 @@ export default function FacultyMembersPage() {
           </p>
 
           {/* Button */}
-          <button className="customButton">Leadership and Staff</button>
+          <Link href={"/about-us/leadership-staff"}>
+            <button className="customButton">Leadership and Staff</button>
+          </Link>
         </div>
       </div>
     </>
