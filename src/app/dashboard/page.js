@@ -4,16 +4,23 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Dashboard() {
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinutes] = useState(0);
-  const [seconds, setSeconds] = useState(0);
   const [deadline, setDeadline] = useState(null);
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
   const [isSubmittingDeadline, setIsSubmittingDeadline] = useState(false);
   const [isSubmittingText, setIsSubmittingText] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    const checkSession = async () => {
+      const res = await fetch("/api/session");
+      const data = await res.json();
+      if (!data.success) {
+        router.push("/login");
+      }
+    };
+    checkSession();
+  }, [router]);
 
   // Fetch Deadline & Banner Text
   useEffect(() => {
@@ -24,7 +31,6 @@ export default function Dashboard() {
         if (deadlineData?.deadline) {
           setDeadline(new Date(deadlineData.deadline));
         }
-
         const bannerRes = await fetch("/api/banner");
         const bannerData = await bannerRes.json();
         if (bannerData?.text1 && bannerData?.text2) {
@@ -35,7 +41,6 @@ export default function Dashboard() {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
   }, []);
 

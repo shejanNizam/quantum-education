@@ -115,18 +115,15 @@ export default function Banner({ onApplyClick }) {
           viewport={{ once: true, amount: 0.8 }}
           className="text-lg md:text-xl text-gray-200 mb-8 customHeading md:w-[50%] mx-auto "
         >
-          Discover an affordable, fast-track path to professional success at our
-          accelerated higher-learning institution.
-          {/* {bannerText.text1} */}
+          {/* Discover an affordable, fast-track path to professional success at our
+          accelerated higher-learning institution. */}
+          {bannerText.text1}
           <br />
           <br />
-          Experience the fusion of academia and industry firsthand. Secure your
-          spot on our waiting list for the Summer Semester of{" "}
-          {/* {bannerText.text2} */}
-          {`${new Date().getFullYear()}`}.
+          {/* Experience the fusion of academia and industry firsthand. Secure your
+          spot on our waiting list for the Summer Semester of{" "} */}
+          {bannerText.text2} {`${new Date().getFullYear()}`}.
         </motion.p>
-        <p className="text-white"> {bannerText.text1} </p>
-        <p className="text-white"> {bannerText.text2} </p>
 
         {/* dynamic  // added for dymanic */}
 
