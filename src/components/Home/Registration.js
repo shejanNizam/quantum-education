@@ -85,37 +85,11 @@ export default function RegistrationForm() {
             variants={scrollVariants}
             className="p-4 md:p-0 lg:p-0 text-lg text-gray-600 font-semibold"
           >
-            It’s never too late to start a new career. Countdown is finished!
+            It’s never too late to start a new career!
           </motion.p>
         </motion.div>
 
         {/* Timer Section */}
-        {/* <motion.div
-          variants={scrollVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="flex justify-center gap-4 items-center text-xl font-bold"
-        >
-          <div className=" flex justify-center items-center mb-12">
-            <div className="text-primary px-4 rounded">
-              <span className="text-4xl"> {timeLeft.days} </span> <br />
-              <span className="text-sm">days</span>
-            </div>
-            <div className="text-primary px-4 rounded">
-              <span className="text-4xl"> {timeLeft.hours} </span> <br />
-              <span className="text-sm">hours</span>
-            </div>
-            <div className="text-primary px-4 rounded">
-              <span className="text-4xl"> {timeLeft.minutes} </span> <br />
-              <span className="text-sm">minutes</span>
-            </div>
-            <div className="text-primary px-4 rounded">
-              <span className="text-4xl"> {timeLeft.seconds} </span> <br />
-              <span className="text-sm">seconds</span>
-            </div>
-          </div>
-        </motion.div> */}
 
         <CountdownTimer />
 

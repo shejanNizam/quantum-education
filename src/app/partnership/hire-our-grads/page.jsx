@@ -63,12 +63,9 @@ export default function PartnershipPage() {
       {/*  forms starts  */}
       <div ref={registrationRef} className="text-center">
         <h3 className="font-bold text-4xl w-full mx-auto my-12">
-          Connect With Top Talent
+          Hire our Grads
         </h3>
-        <p className=" font-semibold mb-12 mx-auto md:w-[40%] ">
-          Our graduates are equipped with cutting-edge skills ready to make an
-          immediate impact in your organization
-        </p>
+
         <motion.div
           variants={scrollVariants}
           initial="hidden"

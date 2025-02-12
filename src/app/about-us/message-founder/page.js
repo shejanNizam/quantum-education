@@ -11,7 +11,7 @@ export default function MessageFounderPage() {
     <>
       <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
         <h2 className="customSubHeading">
-          About | Message from the founder and chancellor
+          About | Message from the Founder and Chancellor
         </h2>
         <div className="flex justify-center">
           <Image
