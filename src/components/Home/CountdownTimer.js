@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const CountdownTimer = () => {
@@ -10,6 +11,15 @@ const CountdownTimer = () => {
   });
 
   const [deadline, setDeadline] = useState(null);
+
+  const scrollVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
 
   useEffect(() => {
     const fetchDeadline = async () => {
@@ -54,11 +64,32 @@ const CountdownTimer = () => {
 
   return (
     <div>
-      <h2>Countdown Timer</h2>
-      <p>
-        {timeLeft.days} Days {timeLeft.hours} Hours {timeLeft.minutes} Minutes{" "}
-        {timeLeft.seconds} Seconds
-      </p>
+      <motion.div
+        variants={scrollVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex justify-center gap-4 items-center text-xl font-bold"
+      >
+        <div className=" flex justify-center items-center mb-12">
+          <div className="text-primary px-4 rounded">
+            <span className="text-4xl"> {timeLeft.days} </span> <br />
+            <span className="text-sm">days</span>
+          </div>
+          <div className="text-primary px-4 rounded">
+            <span className="text-4xl"> {timeLeft.hours} </span> <br />
+            <span className="text-sm">hours</span>
+          </div>
+          <div className="text-primary px-4 rounded">
+            <span className="text-4xl"> {timeLeft.minutes} </span> <br />
+            <span className="text-sm">minutes</span>
+          </div>
+          <div className="text-primary px-4 rounded">
+            <span className="text-4xl"> {timeLeft.seconds} </span> <br />
+            <span className="text-sm">seconds</span>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 };

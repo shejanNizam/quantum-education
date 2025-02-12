@@ -14,7 +14,6 @@ import "swiper/css/pagination";
 import image1 from "../../assets/alumni_work/alumni_work_image_1.jpg";
 import image2 from "../../assets/alumni_work/alumni_work_image_2.jpg";
 import image5 from "../../assets/alumni_work/alumni_work_image_5.png";
-import CountdownTimer from "./CountdownTimer";
 
 export default function AlumniWork() {
   const data = [
@@ -63,7 +62,6 @@ export default function AlumniWork() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <CountdownTimer />
       {/* Section Heading with Scroll Animation */}
       <motion.h2
         className="customHeading text-center"
