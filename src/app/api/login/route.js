@@ -48,7 +48,7 @@ export async function POST(request) {
     cookies().set("session", email, {
       path: "/",
       httpOnly: true,
-      secure: true,
+      // secure: true,
       sameSite: "lax",
       maxAge: 60 * 60 * 24 * 30, // 30 days
       
