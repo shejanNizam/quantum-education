@@ -1,7 +1,8 @@
 "use client";
 import { Button, Form, Input, message } from "antd";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 export default function Dashboard() {
   const [deadline, setDeadline] = useState(null);
@@ -9,18 +10,35 @@ export default function Dashboard() {
   const [text2, setText2] = useState("");
   const [isSubmittingDeadline, setIsSubmittingDeadline] = useState(false);
   const [isSubmittingText, setIsSubmittingText] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [session, setSession] = useState(null);
+
   const router = useRouter();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const checkSession = async () => {
-      const res = await fetch("/api/session");
-      const data = await res.json();
-      if (!data.success) {
+      setLoading(true); // Start loading while session is being verified
+      try {
+        const res = await fetch("/api/session");
+        const data = await res.json();
+        console.log("=====>", data);
+
+        if (!data.success) {
+          console.log("ahadddddddd");
+          router.push("/login");
+        } else {
+          setSession(data);
+          setLoading(false); // Stop loading after session is verified
+        }
+      } catch (error) {
+        console.error("Session check failed:", error);
         router.push("/login");
       }
     };
     checkSession();
-  }, [router]);
+  }, []);
+
+  console.log("REnDeding here");
 
   // Fetch Deadline & Banner Text
   useEffect(() => {
@@ -42,7 +60,7 @@ export default function Dashboard() {
       }
     };
     fetchData();
-  }, []);
+  }, [session]);
 
   // Handle Deadline Submit
   const handleDeadlineSubmit = async (values) => {
@@ -97,7 +115,7 @@ export default function Dashboard() {
     router.push("/login");
   };
 
-  return (
+  return session && !loading && session.email === "admin@gmail.com" ? (
     <div className="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
       {/* Logout Button */}
       <div className="flex justify-end mb-4">
@@ -174,5 +192,17 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
+  ) : (
+   <div className="w-[90%] mx-auto">
+           <Image
+             objectFit="cover"
+             priority={true}
+             src="https://i.stack.imgur.com/hzk6C.gif"
+             width={500}
+             height={500}
+             alt="loading"
+             className="w-96 mx-auto"
+           />
+         </div>
   );
 }

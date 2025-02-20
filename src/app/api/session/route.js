@@ -3,7 +3,6 @@ import { cookies } from "next/headers";
 export async function GET() {
   const session = cookies().get("session");
   console.log(session);
-  
 
   if (!session) {
     return new Response(
