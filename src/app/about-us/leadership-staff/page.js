@@ -42,36 +42,6 @@ export default function LeadershipStaffPage() {
       position: "Vice President",
       image: image4,
     },
-    {
-      id: 1,
-      name: "Engineer, Syed Tasin Ahmed",
-      position: "Founder and Chancellor",
-      image: image1,
-    },
-    {
-      id: 2,
-      name: "Attorney, Thomas E. Seartz",
-      position: "President",
-      image: image2,
-    },
-    {
-      id: 3,
-      name: "USN Veteran, Igin Ismat | MBA – Health Care Management",
-      position: "Chief Operating Officer",
-      image: image3,
-    },
-    {
-      id: 4,
-      name: "Professor, Arlene Larsen | MBA – Technology Management",
-      position: "Vice President",
-      image: image4,
-    },
-    {
-      id: 5,
-      name: "Doctor, Vallery Shematov",
-      position: "Vice President",
-      image: image4,
-    },
   ];
 
   return (

@@ -1,5 +1,5 @@
 import ProfessionalStudiesComp from "@/lib/ProfessionalStudiesComp";
-import DIGITAL_ENGINEERING_IMG from "../../.././../assets/academics/professional-studies/digital_engineering_img.webp";
+import DIGITAL_ENGINEERING_IMG from "../../.././../assets/academics/professional-studies/digital_engineering_img.jpg";
 
 import { getMetadata } from "@/lib/utils";
 export async function generateMetadata() {
@@ -9,7 +9,7 @@ export async function generateMetadata() {
 export default function DigitalEngineeringPage() {
   return (
     <>
-      <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
+      <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-4 lg:w-[70%] xl:p-40 mx-auto ">
         <ProfessionalStudiesComp
           heading={"Digital Engineering / Software Engineering"}
           description={

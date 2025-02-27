@@ -12,28 +12,28 @@ import { FaEnvelope, FaHandPaper, FaPhone } from "react-icons/fa";
 const professionalStudyBenefits = [
   {
     id: 1,
-    icon: <FaBriefcase className="text-6xl text-purple-800" />,
+    icon: <FaBriefcase className="text-3xl text-purple-800" />,
     heading: "Career Opportunities",
     description:
       "Upon successful completion of our program, a plethora of exciting career opportunities awaits you. You will qualify for diverse positions, including software engineer, cyber security and intelligence engineer, QA engineer, automation engineer, tester, developer, cloud engineer, devOPS and much more!",
   },
   {
     id: 2,
-    icon: <FaDollarSign className="text-6xl text-purple-800" />,
+    icon: <FaDollarSign className="text-3xl text-purple-800" />,
     heading: "Earning Potential",
     description:
       "The earning potential for our esteemed graduates is promising. Many individuals begin with a competitive starting salary of $85,000, while others surpass the $150,000 mark, with an average starting salary of $95,680.",
   },
   {
     id: 3,
-    icon: <FaHourglassHalf className="text-6xl text-purple-800" />,
+    icon: <FaHourglassHalf className="text-3xl text-purple-800" />,
     heading: "Duration",
     description:
       "Our program is thoughtfully designed to be completed within a span of 8 to 12 weeks, ensuring a comprehensive yet efficient learning experience for our students.",
   },
   {
     id: 4,
-    icon: <FaCertificate className="text-6xl text-purple-800" />,
+    icon: <FaCertificate className="text-3xl text-purple-800" />,
     heading: "Certification",
     description:
       "Our institution takes pride in being an esteemed higher learning establishment, recognized as a premier trade/vocational school. Our certification holds exceptional value, backed by recognition, approval, and endorsement from the eminent higher education governing body, the State Council of Higher Education for Virginia.",
@@ -50,7 +50,13 @@ export default function ProfessionalStudiesComp({
       <div>
         <h1 className="customHeading mb-8"> {heading} </h1>
         <p className="mb-8"> {description} </p>
-        <Image objectFit="cover" priority={true} src={image} alt="image" />
+        <Image
+          className="w-full h-[60vh]"
+          objectFit="cover"
+          priority={true}
+          src={image}
+          alt="image"
+        />
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
             {professionalStudyBenefits.map((benefit) => (

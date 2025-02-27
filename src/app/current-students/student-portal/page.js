@@ -1,10 +1,9 @@
-import { FaEnvelope } from "react-icons/fa";
-
 import {
   FaBook,
   FaBullhorn,
   FaClipboard,
   FaComments,
+  FaEnvelope,
   FaGraduationCap,
 } from "react-icons/fa";
 
@@ -49,42 +48,44 @@ const infoCards = [
 export default function StudentPortalPage() {
   return (
     <>
-      <div className="min-h-screen bg-white rounded-xl w-[90%] p-4 m-8 lg:w-[70%] lg:p-40 mx-auto ">
+      <div className="min-h-screen bg-white rounded-xl w-full sm:w-[90%] lg:w-[70%] p-4 sm:p-8 lg:p-16 m-4 mx-auto">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Heading */}
-          <h1 className="customSubHeading mb-6 md:mb-0">
-            Welcome to Quantums Student Portal
+          <h1 className="customSubHeading mb-6 md:mb-0 text-center md:text-left">
+            {"Welcome to Quantum's Student Portal"}
           </h1>
 
           {/* Subheading and Description */}
           <div>
-            <h4 className="customSubHeading mb-4">Your Gateway to Success!</h4>
-            <p className="text-gray-600 leading-relaxed">
+            <h4 className="customSubHeading mb-4 text-center md:text-left">
+              Your Gateway to Success!
+            </h4>
+            <p className="text-gray-600 leading-relaxed text-center md:text-left">
               Congratulations on your enrollment at Quantum! Our Student Portal
               is your digital haven, designed to simplify and enhance your
               educational journey.
             </p>
           </div>
         </div>
-        {/*  */}
-        {/* all cards */}
-        <div className="max-w-7xl mx-auto my-12">
-          {/* Heading */}
-          <h2 className="customSubHeading mb-8">Heres what you need to know</h2>
 
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        {/* Info Cards */}
+        <div className="max-w-7xl mx-auto my-12">
+          <h2 className="customSubHeading mb-8 text-center">
+            {"Here's what you need to know"}
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {infoCards.map((card, index) => (
               <div
                 key={index}
-                className="p-6 bg-white shadow-md rounded-lg border border-gray-200 flex items-start gap-4"
+                className="p-2 bg-white shadow-md rounded-lg border border-gray-200 flex items-start gap-2"
               >
                 {/* Icon */}
-                <div className="text-4xl text-primary">{card.icon}</div>
+                <div className="text-2xl text-primary">{card.icon}</div>
 
                 {/* Content */}
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-lg font-bold text-gray-800 mb-2">
                     {card.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
@@ -95,23 +96,27 @@ export default function StudentPortalPage() {
             ))}
           </div>
         </div>
-        {/*  */}
+
+        {/* Accessing Portal Section */}
         <div>
-          <h3 className="customHeading">Accessing Your Portal</h3>
-          <p>
+          <h3 className="customHeading text-center md:text-left">
+            Accessing Your Portal
+          </h3>
+          <p className="text-center md:text-left">
             Upon successful enrollment, you will automatically receive access to
             our Student Portal via email. It’s that simple! Just check your
             inbox for your login details.
           </p>
         </div>
 
-        {/*  */}
-
+        {/* Contact Section */}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 my-12 items-center">
           {/* Text Section */}
           <div>
-            <h1 className="customHeading mb-4">Need Help?</h1>
-            <p className="text-gray-600 leading-relaxed">
+            <h1 className="customHeading mb-4 text-center md:text-left">
+              Need Help?
+            </h1>
+            <p className="text-gray-600 leading-relaxed text-center md:text-left">
               In the rare event that you haven’t received access to the Student
               Portal or encounter any issues, our Student Services team is here
               to assist you promptly. Please reach out to{" "}
@@ -130,7 +135,8 @@ export default function StudentPortalPage() {
             </p>
           </div>
         </div>
-        {/*  */}
+
+        {/* Final Section */}
         <p>
           At Quantum, your success is our priority, and our Student Portal is
           designed to empower you on your educational journey. Get ready to

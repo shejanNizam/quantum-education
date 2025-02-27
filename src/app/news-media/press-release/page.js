@@ -1,5 +1,7 @@
 import Image from "next/image";
-import NEWS_IMG from "../../../assets/news_events/news_img.jpg";
+import NEWS_IMG from "../../../assets/news_events/news_img.png";
+import NEWS_IMG_ONE from "../../../assets/news_events/news_img_one.png";
+import NEWS_IMG_TWO from "../../../assets/news_events/news_img_two.png";
 
 import { getMetadata } from "@/lib/utils";
 export async function generateMetadata() {
@@ -70,7 +72,7 @@ export default function PressReleasePage() {
               <Image
                 objectFit="cover"
                 priority={true}
-                src={NEWS_IMG}
+                src={NEWS_IMG_ONE}
                 alt="Press Releases"
                 width={400}
                 height={300}
@@ -88,7 +90,7 @@ export default function PressReleasePage() {
               <Image
                 objectFit="cover"
                 priority={true}
-                src={NEWS_IMG}
+                src={NEWS_IMG_TWO}
                 alt="Press Releases"
                 width={400}
                 height={300}
