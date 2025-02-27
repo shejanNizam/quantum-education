@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Russo_One } from "next/font/google";
 import Link from "next/link";
 import { CgArrowTopRight } from "react-icons/cg";
-import BG_IMAGE from "../../assets/banner_img/bg_banner.png";
+import BG_IMAGE from "../../assets/banner_img/bg_banner_img.png";
 import styles from "./Banner.module.css";
 
-import { useEffect, useState } from "react"; // added for dymanic
+import { useEffect, useState } from "react";
 
 const russoOne = Russo_One({
   subsets: ["latin"],
