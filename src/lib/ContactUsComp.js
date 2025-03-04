@@ -30,12 +30,14 @@ export default function ContactUsComp({ heading }) {
           </div>
 
           {/* Right Section */}
-          <div className="flex flex-col items-center justify-center text-center">
-            <FaEnvelope className="text-6xl text-primary mb-4" />
-            <p className="text-2xl font-bold text-gray-800">
-              info@qust.education
-            </p>
-          </div>
+          <a href="mailto:info@qust.education">
+            <div className="flex flex-col items-center justify-center text-center">
+              <FaEnvelope className="text-6xl text-primary mb-4" />
+              <p className="text-2xl font-bold text-gray-800">
+                info@qust.education
+              </p>
+            </div>
+          </a>
         </div>
       </div>
     </>

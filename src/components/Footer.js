@@ -135,7 +135,7 @@ export default function Footer() {
             >
               {/* Social Media Icons */}
               <motion.a
-                href="https://facebook.com"
+                href="https://www.facebook.com/quantum.uni"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
@@ -161,7 +161,7 @@ export default function Footer() {
                 <FaTwitter className="w-10 h-10" />
               </motion.a>
               <motion.a
-                href="https://instagram.com"
+                href="https://www.instagram.com/quantum.uni/#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"

@@ -85,33 +85,15 @@ export default function LeadershipStaffPage() {
           <p className=" w-[70%] ">
             For a comprehensive list of our esteemed faculty and staff members,
             please visit the student portal or reach out to us via email at
-            faculty@qust.education If you wish to connect with our{" "}
             <span className="font-bold text-xl text-primary">
-              {" "}
-              Financial Aid{" "}
+              {"  "} faculty@qust.education
             </span>
-            office, please email us at{" "}
-            <span className="font-bold text-xl text-primary">
-              financialaid@qust.education
-            </span>{" "}
-            <br />
-            For all other inquiries email us at{" "}
-            <span className="font-bold text-xl text-primary">
-              info@qust.education
-            </span>{" "}
-            At Quantum Institute of Science and Technology, we are committed to
-            fostering excellence in education and research, and our leadership
-            team is here to guide you every step of the way. Join us in shaping
-            the future of technology and artificial intelligence.
           </p>
           <div className=" w-[30%] ">
             <IoIosMailOpen className="w-[50px] h-[50px]" />
 
             <p className="text-2xl text-primary font-bold ">
-              info@qust.education
-            </p>
-            <p className="text-2xl text-primary font-bold ">
-              financialaid@qust.education
+              faculty@qust.education
             </p>
           </div>
         </div>

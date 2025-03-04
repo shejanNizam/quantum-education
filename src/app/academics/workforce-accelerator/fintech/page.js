@@ -1,5 +1,5 @@
 import WorkforceAcceleratorComp from "@/lib/WorkforceAcceleratorComp";
-import FINTECH_IMG from "../../../../assets/academics/workforce-accelerator/quantum_fintech_img.webp";
+import FINTECH_IMG from "../../../../assets/news_events/news_img.png";
 
 import { getMetadata } from "@/lib/utils";
 export async function generateMetadata() {

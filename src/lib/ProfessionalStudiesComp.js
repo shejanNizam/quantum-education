@@ -92,7 +92,7 @@ export default function ProfessionalStudiesComp({
 
               {/* Center Section */}
               <div className="space-y-4">
-                <div className="flex items-center gap-4">
+                <a href="tel:8018893468" className="flex items-center gap-4">
                   <FaPhone className="text-3xl text-gray-500" />
                   <div>
                     <h3 className="text-lg font-bold text-gray-800">
@@ -100,8 +100,11 @@ export default function ProfessionalStudiesComp({
                     </h3>
                     <p className="text-sm text-gray-500">Call</p>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
+                </a>
+                <a
+                  href="mailto:scholarships@qust.education"
+                  className="flex items-center gap-4"
+                >
                   <FaHandPaper className="text-3xl text-gray-500" />
                   <div>
                     <h3 className="text-lg font-bold text-gray-800">
@@ -109,24 +112,23 @@ export default function ProfessionalStudiesComp({
                     </h3>
                     <p className="text-sm text-gray-500">Scholarship</p>
                   </div>
-                </div>
+                </a>
               </div>
-
               {/* Right Section */}
               <div className="space-y-4">
-                <div className="flex items-center gap-4">
+                <a
+                  href="mailto:tuition@qust.education"
+                  className="flex items-center gap-4"
+                >
                   <FaEnvelope className="text-3xl text-gray-500" />
                   <div>
                     <h3 className="text-lg font-bold text-gray-800">
                       tuition@qust.education
                     </h3>
-                    <p className="text-sm text-gray-500">
-                      Lorem ipsum dolor sit
-                    </p>
                   </div>
-                </div>
-                <Link href={`/contact`}>
-                  <button className="customButton mt-8">Contact Us</button>
+                </a>
+                <Link href={`/`}>
+                  <button className="customButton mt-8">Enroll Now</button>
                 </Link>
               </div>
             </div>

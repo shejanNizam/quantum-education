@@ -1,13 +1,15 @@
+"use client";
+
 import Image from "next/image";
 
 import ContactFormComp from "@/lib/ContactFormComp";
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import CONTACT_IMAGE from "../../assets/about_us/contact_img.webp";
 
-import { getMetadata } from "@/lib/utils";
-export async function generateMetadata() {
-  return getMetadata({ title: "Contact - Quantum Institute" });
-}
+// import { getMetadata } from "@/lib/utils";
+// export async function generateMetadata() {
+//   return getMetadata({ title: "Contact - Quantum Institute" });
+// }
 
 export default function ContactPage() {
   return (
@@ -27,7 +29,12 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 bg-gray-50 my-12">
           {/* Address Section */}
-          <div className="flex items-center gap-4">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=3100+Clarendon+Blvd,+%23200+Arlington,+VA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4"
+          >
             <div className="w-16 h-16 flex items-center justify-center bg-primary/80 hover:bg-primary text-white rounded-3xl">
               <FaMapMarkerAlt className="text-2xl" />
             </div>
@@ -37,10 +44,13 @@ export default function ContactPage() {
                 3100 Clarendon Blvd, #200 Arlington, VA
               </p>
             </div>
-          </div>
+          </a>
 
           {/* Email Section */}
-          <div className="flex items-center gap-4">
+          {/* <a
+            href="mailto:info@qust.education"
+            className="flex items-center gap-4"
+          >
             <div className="w-16 h-16 flex items-center justify-center bg-primary/80 hover:bg-primary text-white rounded-3xl">
               <FaEnvelope className="text-2xl" />
             </div>
@@ -48,10 +58,26 @@ export default function ContactPage() {
               <h3 className="customSubHeading">Email us</h3>
               <p className="text-sm text-gray-600">info@qust.education</p>
             </div>
-          </div>
+          </a> */}
+
+          <a
+            href="mailto:info@qust.education"
+            onClick={(e) => {
+              window.location.href = "mailto:info@qust.education";
+            }}
+            className="flex items-center gap-4"
+          >
+            <div className="w-16 h-16 flex items-center justify-center bg-primary/80 hover:bg-primary text-white rounded-3xl">
+              <FaEnvelope className="text-2xl" />
+            </div>
+            <div>
+              <h3 className="customSubHeading">Email us</h3>
+              <p className="text-sm text-gray-600">info@qust.education</p>
+            </div>
+          </a>
 
           {/* Phone Section */}
-          <div className="flex items-center gap-4">
+          <a href="tel:801-889-3468" className="flex items-center gap-4">
             <div className="w-16 h-16 flex items-center justify-center bg-primary/80 hover:bg-primary text-white rounded-3xl">
               <FaPhone className="text-2xl" />
             </div>
@@ -59,7 +85,7 @@ export default function ContactPage() {
               <h3 className="customSubHeading">Call us</h3>
               <p className="text-sm text-gray-600">801-889-3468</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </>

@@ -25,14 +25,14 @@ export default function ContactFormComp() {
               <FaLinkedin className="w-16 h-16 hover:text-primary" />
             </Link>
             <Link
-              href="https://instagram.com"
+              href="https://www.instagram.com/quantum.uni/#"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaInstagram className="w-16 h-16 hover:text-primary" />
             </Link>
             <Link
-              href="https://facebook.com"
+              href="https://www.facebook.com/quantum.uni"
               target="_blank"
               rel="noopener noreferrer"
             >
