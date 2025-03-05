@@ -13,16 +13,19 @@ import "swiper/css/pagination";
 
 import image1 from "../../assets/alumni_work/alumni_work_image_1.jpg";
 import image2 from "../../assets/alumni_work/alumni_work_image_2.jpg";
+import image3 from "../../assets/alumni_work/alumni_work_image_3.png";
+import image4 from "../../assets/alumni_work/alumni_work_image_4.png";
 import image5 from "../../assets/alumni_work/alumni_work_image_5.png";
+import image6 from "../../assets/alumni_work/alumni_work_image_6.jpg";
 
 export default function AlumniWork() {
   const data = [
     { _id: 1, image: image1 },
     { _id: 2, image: image2 },
+    { _id: 4, image: image3 },
+    { _id: 5, image: image4 },
     { _id: 3, image: image5 },
-    { _id: 4, image: image1 },
-    { _id: 5, image: image2 },
-    { _id: 6, image: image5 },
+    { _id: 6, image: image6 },
   ];
 
   // Animation variants for the section

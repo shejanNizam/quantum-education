@@ -68,10 +68,15 @@ export default function WorkforceAcceleratorComp({
 
           {/* Contact Section */}
           <div className="mt-8 flex items-center gap-4">
-            <FaEnvelope className="text-3xl text-purple-800" />
-            <span className="text-lg font-bold text-gray-800">
-              info@qust.education
-            </span>
+            <a
+              href="mailto:info@qust.education"
+              className="flex items-center gap-4"
+            >
+              <FaEnvelope className="text-3xl text-purple-800" />
+              <span className="text-lg font-bold text-gray-800">
+                info@qust.education
+              </span>
+            </a>
           </div>
 
           {/* Note Section */}
