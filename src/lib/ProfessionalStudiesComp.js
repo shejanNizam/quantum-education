@@ -120,7 +120,7 @@ export default function ProfessionalStudiesComp({
                   href="mailto:tuition@qust.education"
                   className="flex items-center gap-4"
                 >
-                  <FaEnvelope className="text-3xl text-gray-500" />
+                  <FaEnvelope className="text-3xl text-gray-800" />
                   <div>
                     <h3 className="text-lg font-bold text-gray-800">
                       tuition@qust.education
