@@ -70,9 +70,9 @@ export default function Banner({ onApplyClick }) {
           whileInView="visible"
           whileHover={{ scale: 0.7 }}
           viewport={{ once: true, amount: 1 }}
-          className={`${styles.animatedSvg} ${russoOne.className}`} // Apply the font class here
+          className={`${styles.animatedSvg} ${russoOne.className}`}
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1000 150" // Adjust viewBox as needed
+          viewBox="0 0 1000 150"
         >
           <text
             x="50%"

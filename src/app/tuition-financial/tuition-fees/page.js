@@ -9,9 +9,9 @@ const tuitionOptions = [
     id: 1,
     title: "Option 1:",
     // heading: "$0 Tuition Fee - Creating Equal Opportunities",
-    heading: "One-Time Payment,          Regular Tuition: $5,000",
+    heading: "One-Time Payment,          Regular Tuition: $4,500",
     // description: `At Quantum, we stand firmly by our founder’s unwavering commitment to giving back to the community and ensuring equal educational opportunities for all. Our founder’s vision is rooted in the belief that financial constraints should never hinder anyone’s pursuit of a world-class education. In alignment with this noble vision, we are thrilled to announce that eligible students will not bear the burden of any tuition fees.`,
-    description: ` If you’re paying out of pocket in one lump sum, you automatically qualify for a $500 scholarship. This brings your total cost down to $4,500. `,
+    description: ` If you’re paying out of pocket in one lump sum, you automatically qualify for a $500 scholarship. This brings your total cost down to $4,000. `,
   },
   {
     id: 2,

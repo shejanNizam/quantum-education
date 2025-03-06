@@ -5,22 +5,16 @@ import Banner from "@/components/Home/Banner";
 import CareerBlueprint from "@/components/Home/CareerBlueprint";
 import QuantumUnique from "@/components/Home/QuantumUnique";
 import Registration from "@/components/Home/Registration";
-import Test from "@/components/Home/Test";
 import Testimonials from "@/components/Home/Testimonials";
 import Updates from "@/components/Home/Updates";
-import { useRef } from "react";
+import { useScroll } from "@/context/ScrollContext";
 
 export default function Home() {
-  const registrationRef = useRef(null);
-
-  const handleScrollToRegistration = () => {
-    registrationRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  const { handleScrollToRegistration, registrationRef } = useScroll();
 
   return (
     <div className="min-h-screen">
       <Banner onApplyClick={handleScrollToRegistration} />
-      {/* <Test /> */}
       <Updates />
       <QuantumUnique />
       <CareerBlueprint />

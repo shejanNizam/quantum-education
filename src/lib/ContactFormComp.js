@@ -18,7 +18,7 @@ export default function ContactFormComp() {
           </p>
           <div className="flex justify-start gap-8 space-x-8 pt-6">
             <Link
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/quantumuniversity/"
               target="_blank"
               rel="noopener noreferrer"
             >

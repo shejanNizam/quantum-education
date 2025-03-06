@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Script from "next/script";
 import { useEffect, useState } from "react";
-import CountdownTimer from "./CountdownTimer";
 
 export default function RegistrationForm() {
   const containerVariants = {
@@ -61,7 +60,7 @@ export default function RegistrationForm() {
 
   return (
     <motion.div
-      className="py-24 bg-white text-center"
+      className="py-2 bg-white text-center"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -91,7 +90,7 @@ export default function RegistrationForm() {
 
         {/* Timer Section */}
 
-        <CountdownTimer />
+        {/* <CountdownTimer /> */}
 
         {/* Iframe Container */}
         <motion.div
