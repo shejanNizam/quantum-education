@@ -59,6 +59,7 @@ export default function ProfessionalStudiesComp({
         alt="image"
       />
 
+<<<<<<< HEAD
       {/* Professional Study Benefits Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 p-4 sm:p-8">
         {professionalStudyBenefits.map((benefit) => (
@@ -72,6 +73,66 @@ export default function ProfessionalStudiesComp({
                 {benefit.heading}
               </h3>
               <p className="text-gray-600">{benefit.description}</p>
+=======
+        <>
+          <div className="bg-gray-50 p-8">
+            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+              {/* Left Section */}
+              <div>
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                  Tuition
+                </h2>
+                <p className="text-gray-600">
+                  At Quantum, we are dedicated to providing accessible and
+                  comprehensive education for all. Achieve your dreams with our
+                  tailored scholarships and flexible payment plans. Your success
+                  is our priority, empowering you on your educational journey.
+                  Inquire about scholarships and tuition plans now!
+                </p>
+              </div>
+
+              {/* Center Section */}
+              <div className="space-y-4">
+                <a href="tel:8018893468" className="flex items-center gap-4">
+                  <FaPhone className="text-3xl text-gray-500" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800">
+                      (801) 889-3468
+                    </h3>
+                    <p className="text-sm text-gray-500">Call</p>
+                  </div>
+                </a>
+                <a
+                  href="mailto:scholarships@qust.education"
+                  className="flex items-center gap-4"
+                >
+                  <FaHandPaper className="text-3xl text-gray-500" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800">
+                      scholarships@qust.education
+                    </h3>
+                    <p className="text-sm text-gray-500">Scholarship</p>
+                  </div>
+                </a>
+              </div>
+              {/* Right Section */}
+              <div className="space-y-4">
+                <a
+                  href="mailto:tuition@qust.education"
+                  className="flex items-center gap-4"
+                >
+                  <FaEnvelope className="text-3xl text-gray-800" />
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800">
+                      tuition@qust.education
+                    </h3>
+                  </div>
+                </a>
+                <Link href={`/`}>
+                  <button className="customButton mt-8">Enroll Now</button>
+                </Link>
+              </div>
+>>>>>>> 0917d52e503c8e3fb2c511204a1d8f0179e25a09
             </div>
           </div>
         ))}

@@ -91,11 +91,17 @@ export default function AlumniAssociationPage() {
               We’re here to assist you and keep our Quantum family thriving.
             </p>
           </div>
-          <div className=" w-[30%] ">
-            <IoIosMailOpen className="w-[50px] h-[50px]" />
-            <p className="text-2xl text-primary font-bold ">
-              alumni@qust.education
-            </p>
+
+          <div className="mt-8 flex items-center gap-4">
+            <a
+              href="mailto:info@qust.education"
+              className="flex items-center gap-4"
+            >
+              <IoIosMailOpen className="w-[50px] h-[50px]" />
+              <p className="text-2xl text-primary font-bold ">
+                alumni@qust.education
+              </p>
+            </a>
           </div>
         </div>
         <p className="font-semibold mt-8">

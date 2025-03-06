@@ -89,12 +89,17 @@ export default function LeadershipStaffPage() {
               {"  "} faculty@qust.education
             </span>
           </p>
-          <div className=" w-[30%] ">
-            <IoIosMailOpen className="w-[50px] h-[50px]" />
 
-            <p className="text-2xl text-primary font-bold ">
-              faculty@qust.education
-            </p>
+          <div className="mt-8 flex items-center gap-4">
+            <a
+              href="mailto:info@qust.education"
+              className="flex items-center gap-4"
+            >
+              <IoIosMailOpen className="w-[50px] h-[50px]" />
+              <p className="text-2xl text-primary font-bold ">
+                faculty@qust.education
+              </p>
+            </a>
           </div>
         </div>
       </div>
