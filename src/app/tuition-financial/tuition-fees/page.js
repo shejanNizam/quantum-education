@@ -8,39 +8,26 @@ const tuitionOptions = [
   {
     id: 1,
     title: "Option 1:",
-    // heading: "$0 Tuition Fee - Creating Equal Opportunities",
-    heading: "One-Time Payment,          Regular Tuition: $4,500",
-    // description: `At Quantum, we stand firmly by our founder’s unwavering commitment to giving back to the community and ensuring equal educational opportunities for all. Our founder’s vision is rooted in the belief that financial constraints should never hinder anyone’s pursuit of a world-class education. In alignment with this noble vision, we are thrilled to announce that eligible students will not bear the burden of any tuition fees.`,
-    description: ` If you’re paying out of pocket in one lump sum, you automatically qualify for a $500 scholarship. This brings your total cost down to $4,000. `,
+    heading: `$4,500 One-Time Payment`,
+    description: `If you plan to pay your entire tuition in one lump sum, you’ll automatically qualify for a $500 scholarship. This reduces your total cost from $5,000 to $4,500.`,
   },
   {
     id: 2,
     title: "Option 2:",
-    heading: "Flex Payment Plan",
-    // description: `If you’re part of InsightIQ or proceed with signing an active contract with them, you’re in for substantial scholarship! While our regular tuition is $9,600, eligible students associated with InsightIQ can enjoy a reduced tuition of just $3,800. That’s an instant scholarship of $5,800, making your education significantly more affordable.
-    // Please note that all students are eligible for a full refund, with specific refund details outlined in the enrollment document. Additionally, a $100 non-refundable enrollment fee applies to all students.`,
-    description: ` If you prefer to spread out your payments, you can pay $1,000 upfront and then cover the remaining $4,000 within 6 months. `,
+    heading: `$5,000 Flex Payment Plan`,
+    description: `If you prefer a flexible approach, you can pay $1,000 upfront and then spread the remaining $4,000 over eight months.`,
   },
   {
     id: 3,
     title: "Option 3:",
-    // heading: "$7,600 Tuition with Scholarships",
-    heading: "Creating Equal Opportunities – $0 Tuition",
-    // description: `Instead of the regular $9,600 tuition, you can pay just $7,600 through two fantastic scholarship options: - Early Payment Scholarship: Pay your full tuition upfront or in two payments within 30 days to qualify for a $2,000 scholarship. Please note that this scholarship doesn’t apply to company or corporate-funded training programs.
-    // - Academic Achievement Scholarship: Maintain a GPA of 3.5 or higher and pay your tuition in two installments to receive a $2,000 scholarship. You’ll also have an extended 60 days to complete your payment.
-    // Please note that all students are eligible for a full refund, with specific refund details outlined in the enrollment document. Additionally, a $100 non-refundable enrollment fee applies to all students.`,
-
-    description: ` Our founder’s vision is deeply rooted in giving back and ensuring that financial barriers never stand in the way of receiving a world-class education. If you meet the eligibility criteria, you won’t pay any tuition fees at all. Additionally, if you’re funded by an eligible government-approved program, you automatically qualify for a $0 tuition fee.
- `,
+    heading: `$0 Creating Equal Opportunities`,
+    description: `Our founder’s vision is to remove financial barriers, ensuring everyone has access to a world-class education. If you meet the eligibility criteria, you pay no tuition at all. Additionally, if you’re funded by an eligible government-approved program, you automatically qualify for a $0 tuition fee.`,
   },
   {
     id: 4,
     title: "Option 4:",
-    // heading: "$9,600 Tuition (Pay $4,800 Upfront)",
-    heading: "InsightIQ Partnership – $3,800 Tuition",
-    // description: `Choose flexibility with our payment plan. Pay just half of your tuition, which is $4,800, at the beginning. The remaining amount can be paid in smaller installments over 18 months. For more information or any questions about this option, feel free to contact us at tuition@qust.education.
-    // Please note that all students are eligible for a full refund, with specific refund details outlined in the enrollment document. Additionally, a $100 non-refundable enrollment fee applies to all students.`,
-    description: ` If you are already part of InsightIQ or sign an active contract with them, you’ll receive a $1,200 scholarship. This reduces your tuition from $5,000 to just $3,800, making your education significantly more affordable. `,
+    heading: `$3,800 InsightIQ Partnership`,
+    description: `If you’re already part of InsightIQ or sign an active contract with them, you’ll receive a $1,200 scholarship. This brings your tuition down from $5,000 to $3,800.`,
   },
 ];
 
