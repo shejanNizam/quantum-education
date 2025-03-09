@@ -1,6 +1,5 @@
 import ProfessionalStudiesComp from "@/lib/ProfessionalStudiesComp";
 import { getMetadata } from "@/lib/utils";
-import Link from "next/link";
 import DIGITAL_BUSINESS_IMG from "../../.././../assets/academics/professional-studies/digital_business_img.jpg";
 
 export async function generateMetadata() {
@@ -13,21 +12,7 @@ export default function DigitalBusinessPage() {
       <ProfessionalStudiesComp
         heading={"Digital Business / Product Management"}
         description={
-          <>
-            At Quantum, we’re committed to making education both accessible and
-            comprehensive for everyone. Unlock your potential with our tailored
-            scholarships and flexible payment plans, designed to help you
-            achieve your goals. Your success is our priority—let us empower you
-            on your educational journey. For full details, please visit our{" "}
-            <Link
-              className=" text-2xl text-primary font-bold "
-              href={`/tuition-financial/tuition-fees`}
-            >
-              Tuition and Fees
-            </Link>{" "}
-            page or reach out to learn more about available scholarships and
-            payment options!
-          </>
+          "Welcome to our Digital Business program. Where we offer a gateway for individuals seeking to embark on a promising career in engineering. Our comprehensive curriculum is thoughtfully crafted to equip you with coding expertise and mastery of technical skills. Throughout the program, we focus on cultivating daily soft skills, engaging in portfolio projects, and building a robust engineering foundation, with special emphasis on Security Fundamentals, Java, and Selenium. If you're eager to delve deeper into our curriculum, we would be delighted to furnish you with a detailed overview upon request."
         }
         image={DIGITAL_BUSINESS_IMG}
       />

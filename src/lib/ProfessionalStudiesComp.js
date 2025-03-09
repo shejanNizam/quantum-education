@@ -84,11 +84,22 @@ export default function ProfessionalStudiesComp({
           <div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Tuition</h2>
             <p className="text-gray-600">
-              At Quantum, we are dedicated to providing accessible and
-              comprehensive education for all. Achieve your dreams with our
-              tailored scholarships and flexible payment plans. Your success is
-              our priority, empowering you on your educational journey. Inquire
-              about scholarships and tuition plans now!
+              <>
+                At Quantum, we’re committed to making education both accessible
+                and comprehensive for everyone. Unlock your potential with our
+                tailored scholarships and flexible payment plans, designed to
+                help you achieve your goals. Your success is our priority—let us
+                empower you on your educational journey. For full details,
+                please visit our{" "}
+                <Link
+                  className=" text-2xl text-primary font-bold "
+                  href={`/tuition-financial/tuition-fees`}
+                >
+                  Tuition and Fees
+                </Link>{" "}
+                page or reach out to learn more about available scholarships and
+                payment options!
+              </>
             </p>
           </div>
 
